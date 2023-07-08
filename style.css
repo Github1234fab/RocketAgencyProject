@@ -8,7 +8,7 @@ html {
 }
 header {
   position: relative;
-  height: 600px;
+  height: 650px;
   width: 100vw;
   background-color: rgb(10, 10, 78);
   display: grid;
@@ -21,22 +21,24 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 320px;
-  margin-left: 180px;
+  margin-left: 120px;
   z-index: 9999999;
   width: 100%;
+  height: auto;
+  gap: 20px;
 }
 .title {
-  font-size: clamp(4em, 2.5vw, 5.5em);
+  font-size: 5em;
   color: white;
   font-family: Bebas Neue;
   text-align: justify;
   font-weight: 900;
   width: 100%;
-  line-height: 22px;
+  line-height: 40px;
   text-shadow: 0px 0px 80px white;
 }
 .title span {
-  font-size: 22px;
+  font-size: 0.4em;
   color: white;
   font-family: Bebas Neue;
   text-align: justify;
@@ -46,7 +48,7 @@ header {
   border-bottom: solid 1px orange;
 }
 .subtitle {
-  font-size: clamp(1em, 1.5vw, 1.7em);
+  font-size: 1em;
   color: white;
   margin-top: -10px;
   font-family: lato;
@@ -146,22 +148,23 @@ header {
 .stars {
   position: absolute;
   background-color: rgb(246, 246, 88);
-  height: 2px;
+  height: 1px;
   border-radius: 50%;
   z-index: O;
+ 
 }
 .desert {
   position: absolute;
   width: 100%;
   height: 20%;
-  margin-top: 520px;
+  margin-top: 560px;
   z-index: 3;
 }
 
 .moon {
   position: absolute;
   z-index: 2;
-  left: 0px;
+  left: -90px;
   top: 320px;
 }
 
@@ -169,12 +172,12 @@ header {
 
 .sectionA {
   margin-top: 10px;
-  height: 1100px;
-  margin-bottom: 200px;
+  min-height: 500px;
+  margin-bottom: 10px;
   background-image: url("./assets/pngegg\ \(72\).png");
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   filter: saturate(100%);
   background-color: orange;
   box-shadow: 3px 0px 5px black;
@@ -184,12 +187,20 @@ header {
   background-color: transparent;
   display: flex;
   overflow: hidden;
-  align-items: center;
-  gap: 50px;
+  align-items: center; /* gap: 50px; */
   padding: 40px;
   z-index: 99999;
 }
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .marquee_txt {
+  margin-top: 40px;
   font-size: 6em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -201,6 +212,7 @@ header {
   animation: marquee 10s linear infinite;
   padding: 20px;
   z-index: 99999;
+  margin-bottom: 40px;
 }
 .marquee_txt span {
   font-weight: 900;
@@ -214,7 +226,7 @@ header {
   flex-wrap: wrap;
   gap: 100px;
   margin-top: 200px;
-height: 60%;
+  height: 60%;
 }
 .sectionA_title {
   font-family: Agdasima;
@@ -295,42 +307,127 @@ height: 60%;
   justify-content: center;
   background-color: pink;
 }
-.caroussel {
-  height: auto;
-  width: 50%;
-}
+
 .sectionD {
   background-color: rgb(5, 5, 57);
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.caroussel {
+  width: 10%;
 }
+
+.carousel-inner {
+  border-radius: 40% 10% 80% 40%;
+}
+.sectionD{
+  height: 1000px;
+  width:100vw;
+  background-color: rgb(5, 0, 73);
+  background-image: url("./assets/pngegg\ \(71\).png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: top;
+}
+
+
+
 
 /* ######################################## */
 /* ######################################## */
 /* ######################################## */
 
 @media screen and (max-width: 770px) {
-  .container_circle {
-    height: 60px;
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .satelit {
+    height: 80px;
     width: 80px;
+    margin-top: -270px;
   }
-  .sectionB_wrapperContainers123 {
+
+  .header_title {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    gap: 30px;
+    flex-direction: column;
+    margin-top: 350px;
+    margin-left: 60px;
+    z-index: 9999999;
+    width: 400px;
   }
-  .sectionB_wrapperContainers456 {
+  .title {
+    font-size: 3em;
+    line-height: 20px;
+  }
+  .title span {
+    font-size: 0.3em;
+    color: white;
+    font-family: Bebas Neue;
+    text-align: justify;
+    font-weight: 900;
+    width: 100%;
+    letter-spacing: 3px;
+    border-bottom: solid 1px orange;
+  }
+
+  .subtitle {
+    width: 100%;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+  }
+  .header_menu {
+    color: white;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 240px;
+    width: 23%;
+    height: auto;
+    z-index: 99999;
+    visibility: visible;
+    margin-top: -200px;
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 1s;
   }
+  .menu_title {
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    font-family: Agdasima;
+    font-weight: 200;
+    transform: translateX(0px);
+    text-shadow: 0px 0px 100px white;
+    line-height: 50px;
+  }
+  .marquee_txt {
+  margin-top: 40px;
+  font-size: 6em;
+}
+.sectionA {
+  margin-top: 10px;
+  min-height: 500px;
+  margin-bottom: 10px;
+  background-image: url("./assets/pngegg\ \(72\).png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(100%);
+  background-color: orange;
+  box-shadow: 3px 0px 5px black;
+}
+.sectionA_container_titles {
+  display: grid;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  height: auto;
+}
+.sectionA_title {
+  font-family: Agdasima;
+  font-size: 1.8em;
+  padding: 30px;
+}
+
 }

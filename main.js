@@ -1,14 +1,17 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
-for (let i = 0; i < 550; i++) {
+for (let i = 0; i < 750; i++) {
   let starsA = document.createElement("div");
 
   starsA.classList.add("stars");
-  starsA.style.width = Math.floor(Math.random() * 2 + 1) + "px";
+  starsA.style.width = Math.floor(Math.random() * 1 + 1) + "px";
   starsA.style.left = Math.random() * innerWidth + "px";
   starsA.style.top = Math.random() * innerWidth + "px";
-  starsA.style.boxShadow = "0px 0px 5px white";
+  starsA.style.backgroundColor = "yellow";
+  if (window.innerWidth < 770) {
+    starsA.style.top = Math.random() * 1.5 * innerWidth + "px";
+  }
 
   header.appendChild(starsA);
 }
@@ -123,3 +126,6 @@ menuTitle.forEach(function (menuTitle) {
     }
   });
 });
+
+
+
