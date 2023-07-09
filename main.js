@@ -95,6 +95,18 @@ gsap.to(".sectionA_container_titles", {
   },
 });
 
+// gsap.fromTo(
+//   ".balançoire",
+//   {
+//     rotationX: -100,
+//   },
+//   {
+//     rotationX: 100,
+//     duration: 10,
+//     yoyo: "true",
+//   }
+// );
+
 const satelit = document.querySelector(".satelit");
 const headerMenu = document.querySelector(".header_menu_invisible");
 const headerMenuVisible = document.querySelector(".header_menu");
@@ -127,5 +139,30 @@ menuTitle.forEach(function (menuTitle) {
   });
 });
 
+const autoText = document.querySelector(".auto_text");
+console.log(autoText);
+const buttons = document.querySelectorAll(".button_astonaut_choice");
+console.log(buttons);
+const autoTextAnswer = document.querySelector(".auto_text_answer");
+
+const txt = "Do you feel ready to become an astronaut ?";
+const txt2 = "Don't worry. We will prepare you to become the greatest of astronauts :)";
+const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
+autoText.textContent = txt;
+
+buttons.forEach(buttons => buttons.addEventListener("click", function () {
+  this.dataset.choice = this.dataset.choice == "1" ? "2" : "1";
+
+  if (this.dataset.choice === "2") {
+    console.log(txt2)
+    autoTextAnswer.textContent = txt2;
+    autoTextAnswer.classList.add("auto_text");
+  } else if (this.dataset.choice === "1") {
+    autoTextAnswer.textContent = txt3;
+     autoTextAnswer.classList.add("auto_text");
+     console.log(txt3);
+  }
+})
+);  
 
 

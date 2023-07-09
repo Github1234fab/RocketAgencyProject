@@ -151,7 +151,6 @@ header {
   height: 1px;
   border-radius: 50%;
   z-index: O;
- 
 }
 .desert {
   position: absolute;
@@ -319,22 +318,63 @@ header {
 .carousel-inner {
   border-radius: 40% 10% 80% 40%;
 }
-.sectionD{
+.sectionD {
   height: 1000px;
-  width:100vw;
+  width: 100vw;
   background-color: rgb(5, 0, 73);
-  background-image: url("./assets/pngegg\ \(71\).png");
-background-size: contain;
-background-repeat: no-repeat;
-background-position: top;
+  overflow: hidden;
+}
+.balançoire {
+  height: 500px;
+  margin-left: -50px;
+  margin-top: -200px;
+  animation: balancement 5s infinite;
+}
+.container_textZone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 200px;
+}
+.auto_text {
+  color: rgb(146, 146, 243);
+  font-family: Agdasima;
+  font-size: 1.5em;
+  border-right: 1px solid rgb(137, 137, 243);
+  animation: autoTxt 5s steps(60);
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 0px 0px 60px rgb(158, 158, 251);
+  margin-left: 20px;
 }
 
+@keyframes autoTxt {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
+.container_buttons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
 
+.button_astonaut_choice {
+  color: white;
+  font-family: Agdasima;
+  padding: 20px;
+  background: linear-gradient(to right, blue 10%, orange);
+}
 
-/* ######################################## */
-/* ######################################## */
-/* ######################################## */
+/* #######################################################################################################################################################@####*/
+/* ############################################################################################################################################################@ */
+/* ############################################################################################################################################################## */
 
 @media screen and (max-width: 770px) {
   header {
@@ -401,33 +441,32 @@ background-position: top;
     line-height: 50px;
   }
   .marquee_txt {
-  margin-top: 40px;
-  font-size: 6em;
-}
-.sectionA {
-  margin-top: 10px;
-  min-height: 500px;
-  margin-bottom: 10px;
-  background-image: url("./assets/pngegg\ \(72\).png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: saturate(100%);
-  background-color: orange;
-  box-shadow: 3px 0px 5px black;
-}
-.sectionA_container_titles {
-  display: grid;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 40px;
-  height: auto;
-}
-.sectionA_title {
-  font-family: Agdasima;
-  font-size: 1.8em;
-  padding: 30px;
-}
-
+    margin-top: 40px;
+    font-size: 6em;
+  }
+  .sectionA {
+    margin-top: 10px;
+    min-height: 500px;
+    margin-bottom: 10px;
+    background-image: url("./assets/pngegg\ \(72\).png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: saturate(100%);
+    background-color: orange;
+    box-shadow: 3px 0px 5px black;
+  }
+  .sectionA_container_titles {
+    display: grid;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 100px;
+    height: auto;
+  }
+  .sectionA_title {
+    font-family: Agdasima;
+    font-size: 1.8em;
+    padding: 30px;
+  }
 }
