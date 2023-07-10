@@ -5,7 +5,7 @@ for (let i = 0; i < 750; i++) {
   let starsA = document.createElement("div");
 
   starsA.classList.add("stars");
-  starsA.style.width = Math.floor(Math.random() * 1 + 1) + "px";
+  starsA.style.width = Math.floor(Math.random() * 1 + 2) + "px";
   starsA.style.left = Math.random() * innerWidth + "px";
   starsA.style.top = Math.random() * innerWidth + "px";
   starsA.style.backgroundColor = "yellow";
@@ -31,13 +31,14 @@ const rockets = document.querySelectorAll(".rocket_wrapper");
 
 rockets.forEach((rocket, index) => {
   gsap.to(rocket, {
-    y: -640,
+    y: -680,
     duration: 1,
     scrollTrigger: {
       trigger: ".header",
       start: "top",
       end: "top -4px",
       toggleActions: "play none reverse none",
+    
     },
     delay: index * 1, // Délai d'exécution différent pour chaque fusée
   });
@@ -49,6 +50,7 @@ gsap.to(".sectionA", {
   scrollTrigger: {
     trigger: ".header",
     start: "top -15%",
+
   },
 });
 
@@ -58,7 +60,7 @@ gsap.to(".marquee_wrapper", {
   scrollTrigger: {
     trigger: ".sectionA",
     start: "center 50%",
-    scrub: 3,
+   
   },
 });
 
@@ -68,18 +70,19 @@ gsap.to(".sectionB", {
   scrollTrigger: {
     trigger: ".marquee_wrapper",
     start: "top",
-    scrub: 3,
+  
   },
 });
 
 gsap.to(".moon", {
-  y: -280,
-  duration: 3,
+  y: -270,
+  duration: 4,
   scrollTrigger: {
     trigger: ".header",
     start: "top",
     end: "top -4px",
     toggleActions: "play none reverse none",
+
   },
 });
 
@@ -92,8 +95,16 @@ gsap.to(".sectionA_container_titles", {
     start: "center",
     // end: "bottom",
     toggleActions: "play none reverse none",
+ 
   },
 });
+
+gsap.to(".auto_text", {
+  scrollTrigger: {
+    trigger: ".auto_text",
+    start: "bottom",
+}
+})
 
 // gsap.fromTo(
 //   ".balançoire",
