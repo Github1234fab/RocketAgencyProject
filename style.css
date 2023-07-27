@@ -5,41 +5,54 @@
 }
 html {
   font-size: 16px;
+  user-select: none;
 }
+@font-face {
+  font-family: "Upheaval";
+  src: url("./assets/upheavtt.ttf") format("truetype");
+  /* Vous pouvez également spécifier les autres formats de police ici, si nécessaire. */
+}
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("./assets/VCR_OSD_MONO_1.001-1.ttf") format("truetype");
+  /* Vous pouvez également spécifier les autres formats de police ici, si nécessaire. */
+}
+
 header {
   position: relative;
   height: 650px;
   width: 100vw;
-  background-color: rgb(10, 10, 78);
+  background-color: #001540;
   display: grid;
   overflow: hidden;
   box-shadow: 5px 0px 5px black;
   grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 30% 30% 40%;
 }
 .header_title {
   grid-column: 1;
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 460px;
+  top: 470px;
   left: 140px;
-  z-index: 9999999;
+  z-index: 99999;
   width: 100%;
 }
 .title {
   font-size: 3em;
   color: white;
-  font-family: Bebas Neue;
+  font-family: Tektur;
   text-align: justify;
   font-weight: 900;
   width: 100%;
   line-height: 20px;
-  text-shadow: 0px 0px 80px white;
+  text-shadow: 0px 0px 130px white;
 }
 .title span {
-  font-size: 0.4em;
+  font-size: 0.3em;
   color: white;
-  font-family: Bebas Neue;
+  font-family: Manrope;
   font-weight: 900;
   width: 100%;
   letter-spacing: 3px;
@@ -62,10 +75,12 @@ header {
   font-weight: 200;
   transform: translateX(0px);
   text-shadow: 0px 0px 100px white;
+  line-height: 60px;
+  text-align: center;
 }
 .menu_title:hover {
-  color: rgb(166, 166, 248);
-  border-bottom: rgb(234, 159, 126) solid 5px;
+  color: #FDDD55;
+  border-bottom:#6FFCA4 solid 5px;
   border-radius: 10px;
   /* animation: menu_title_animation 0.2s ease-in-out;
   animation-delay: 0.8s; */
@@ -85,40 +100,51 @@ header {
 }
 
 .header_menu {
-  grid-column: 3;
+  grid-column: 1/4;
+  grid-row: 1;
   color: white;
   display: flex;
+  align-items: center;
+  align-content: center;
   justify-content: space-around;
   width: 100%;
-  height: 20%;
   z-index: 99999;
-  padding: 20px;
   visibility: visible;
-  margin-top: 250px;
   opacity: 0.5;
   transition-property: opacity;
   transition-duration: 1s;
-  flex-wrap: wrap;
+
 }
 
 .satelit {
+  position: absolute;
   grid-column: 2;
-  height: 20%;
+  height: 13%;
   transition: 0.2s ease-in-out;
-  margin-top: 120px;
+  margin-top: 220px;
   margin-left: 100px;
   transform: translateX(0px);
   z-index: 999999;
-  animation: bounce 4s ease-in-out;
+  animation: bounce 5s ease-in-out;
   animation-iteration-count: infinite;
 }
+
 @keyframes bounce {
   0%,
   100% {
-    transform: translateX(10px);
+    transform: translateX(20px);
   }
   50% {
-    transform: translateX(-10px);
+    transform: translateX(-30px);
+  }
+}
+@keyframes noBounce {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(0px);
   }
 }
 
@@ -219,6 +245,7 @@ header {
   z-index: 99999;
   margin-bottom: 40px;
 }
+
 .marquee_txt span {
   font-weight: 900;
   color: transparent;
@@ -231,14 +258,14 @@ header {
   flex-wrap: wrap;
   gap: 100px;
   margin-top: 200px;
-  height: 60%;
+  height: 30%;
 }
 .sectionA_title {
   font-family: Agdasima;
   font-size: 3.4em;
   color: rgb(13, 50, 111);
   background-color: rgba(229, 24, 24, 0.581);
-  padding: 100px;
+  padding: 50px;
   backdrop-filter: blur(1px);
   text-transform: capitalize;
   transition: 0.2s ease-in-out;
@@ -252,22 +279,6 @@ header {
 /* ######################################## */
 /* ######################################## */
 
-.sectionC {
-  height: 700px;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: pink;
-}
-
-.caroussel {
-  width: 10%;
-}
-
-.carousel-inner {
-  border-radius: 40% 10% 80% 40%;
-}
 .sectionB {
   background-color: rgb(5, 5, 57);
   height: 1000px;
@@ -275,11 +286,24 @@ header {
   background-color: rgb(5, 0, 73);
   overflow: hidden;
 }
+
 .balançoire {
   height: 500px;
   margin-left: -50px;
   margin-top: -200px;
   animation: balancement 5s infinite;
+}
+.viseur {
+  height: 100px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 330px;
 }
 .container_textZone {
   display: flex;
@@ -288,16 +312,19 @@ header {
   align-items: center;
   min-height: 200px;
 }
+
 .auto_text {
-  color: rgb(146, 146, 243);
-  font-family: Agdasima;
+  color: rgb(255, 255, 255);
+  font-family: Upheaval;
   font-size: 1.5em;
-  border-right: 1px solid rgb(137, 137, 243);
-  animation: autoTxt 5s steps(60);
+  /* border-right: 1px solid rgb(137, 137, 243); */
+  animation: autoTxt 4s steps(50);
   overflow: hidden;
   white-space: nowrap;
   text-shadow: 0px 0px 60px rgb(158, 158, 251);
-  margin-left: 20px;
+  margin-left: 10px;
+  width: auto;
+  z-index: 2;
 }
 
 @keyframes autoTxt {
@@ -305,24 +332,31 @@ header {
     width: 0;
   }
   100% {
-    width: 100%;
+    width: 55%;
   }
 }
 
 .container_buttons {
   display: flex;
-  align-items: center;
   width: 100%;
+  height: 100px;
   justify-content: space-around;
 }
 
 .button_astonaut_choice {
-  box-shadow: inset 2px 2px 5px black;
-  width: 20%;
+  border: none;
+  width: 10%;
   color: white;
   font-family: Agdasima;
   padding: 20px;
-  background: linear-gradient(to right, blue 10%, orange);
+  border-radius: 20px 20px 10px 10px;
+  background: linear-gradient(to right, blue 10%, rgb(9, 12, 184));
+  box-shadow: 0px 0px 10px yellow;
+}
+.button_astonaut_choice {
+}
+.screen-controller {
+  margin-top: -100px;
 }
 
 /* #######################################################################################################################################################@####*/
