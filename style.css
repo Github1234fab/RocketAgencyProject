@@ -17,6 +17,9 @@ html {
   src: url("./assets/VCR_OSD_MONO_1.001-1.ttf") format("truetype");
   /* Vous pouvez également spécifier les autres formats de police ici, si nécessaire. */
 }
+body {
+  scroll-behavior: smooth;
+}
 
 header {
   position: relative;
@@ -26,8 +29,8 @@ header {
   display: grid;
   overflow: hidden;
   box-shadow: 5px 0px 5px black;
-  grid-template-columns: 40% 20% 40%;
-  grid-template-rows: 30% 30% 40%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 50% 30%;
 }
 .header_title {
   grid-column: 1;
@@ -52,7 +55,7 @@ header {
 .title span {
   font-size: 0.3em;
   color: white;
-  font-family: Manrope;
+  font-family: Kanit;
   font-weight: 900;
   width: 100%;
   letter-spacing: 3px;
@@ -79,8 +82,8 @@ header {
   text-align: center;
 }
 .menu_title:hover {
-  color: #FDDD55;
-  border-bottom:#6FFCA4 solid 5px;
+  color: #fddd55;
+  border-bottom: #6ffca4 solid 5px;
   border-radius: 10px;
   /* animation: menu_title_animation 0.2s ease-in-out;
   animation-delay: 0.8s; */
@@ -106,33 +109,76 @@ header {
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: space-around;
+  justify-content:space-evenly ;
   width: 100%;
   z-index: 99999;
   visibility: visible;
   opacity: 0.5;
   transition-property: opacity;
   transition-duration: 1s;
+}
 
+.container-promiseValue {
+  grid-column: 2;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  z-index: 9999999;
+}
+.promise {
+  color: white;
+  font-size: 2em;
+  font-family: Kanit;
+  line-height: 40px;
+}
+.promise-subTitle {
+  color: white;
+  font-size: 1em;
+  font-family: Kanit;
+}
+.socialPromise {
+  color: white;
+  font-size: 0.7em;
+ font-family: Kanit;
+}
+.promiseValue-cta {
+  background-color: #fddd55;
+  color: #001540;
+  border: #ffffff 4px solid;
+  padding: 20px;
+  border-radius: 5%;
+  z-index: 9999999;
+  width: 20%;
+}
+.promiseValue-cta:hover{
+  background-color: orange;
+}
+.wrapper-socialPromise{
+  background: linear-gradient(to left, blue, white);
+  z-index: 99999999;
+  padding: 20px;
 }
 
 .satelit {
-  position: absolute;
-  grid-column: 2;
-  height: 13%;
+  grid-column: 1/4;
+  grid-row: 2/4;
+  height: 5em;
   transition: 0.2s ease-in-out;
   margin-top: 220px;
   margin-left: 100px;
   transform: translateX(0px);
   z-index: 999999;
-  animation: bounce 5s ease-in-out;
+  animation: bounce 14s ease-in-out;
   animation-iteration-count: infinite;
 }
 
 @keyframes bounce {
   0%,
   100% {
-    transform: translateX(20px);
+    transform: translateX(220px);
   }
   50% {
     transform: translateX(-30px);
@@ -185,7 +231,7 @@ header {
   position: absolute;
   width: 100%;
   height: 20%;
-  margin-top: 560px;
+  margin-top: 568px;
   z-index: 3;
 }
 
@@ -198,8 +244,14 @@ header {
   grid-column: 1;
 }
 
+
+
 /* ######################################## */
 /* ######################################## */
+/* ######################################## */
+/* ######################################## */
+
+
 
 .sectionA {
   margin-top: 10px;
@@ -210,7 +262,7 @@ header {
   background-position: center;
   /* background-repeat: no-repeat; */
   filter: saturate(100%);
-  background-color: orange;
+  background-color: rgb(189, 103, 22);
   box-shadow: 3px 0px 5px black;
 }
 
@@ -232,7 +284,7 @@ header {
 }
 .marquee_txt {
   margin-top: 40px;
-  font-size: 6em;
+  font-size: 12em;
   text-transform: uppercase;
   white-space: nowrap;
   font-family: Big Shoulders text;
@@ -240,7 +292,7 @@ header {
   color: transparent;
   -webkit-text-stroke: 3px;
   -webkit-text-stroke-color: #ffffff;
-  animation: marquee 10s linear infinite;
+  animation: marquee 18s linear infinite;
   padding: 20px;
   z-index: 99999;
   margin-bottom: 40px;
@@ -251,29 +303,56 @@ header {
   color: transparent;
 }
 
-.sectionA_container_titles {
+.sectionA_container_services {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 100px;
-  margin-top: 200px;
-  height: 30%;
+  gap: 150px;
+  margin-top: 250px;
+  height: 100%;
+}
+.sectionA-wrapper-services {
+  background-color: rgba(255, 255, 255, 0.259);
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 2px 5px rgb(73, 73, 73);
+  backdrop-filter: blur(8px);
+  border: 1px white solid;
+  padding: 30px;
+}
+.sectionA-wrapper-services:hover {
+  background-color:orange ;
 }
 .sectionA_title {
-  font-family: Agdasima;
-  font-size: 3.4em;
-  color: rgb(13, 50, 111);
-  background-color: rgba(229, 24, 24, 0.581);
-  padding: 50px;
-  backdrop-filter: blur(1px);
-  text-transform: capitalize;
-  transition: 0.2s ease-in-out;
-  box-shadow: 1px 2px 5px rgb(73, 73, 73);
+  font-family: Kanit;
+  font-size: 2em;
+  color: #001540;
 }
 .sectionA_title:hover {
-  background-color: rgba(3, 33, 84, 0.54);
+  background-color: transparent;
   color: white;
+}
+.sectionA-titles-p{
+  font-family: Kanit;
+  font-size: 1em;
+  color: white;
+  padding: 5%;
+}
+.sectionA-buttons {
+  background-color: #acb334;
+  border: none;
+  width: 30%;
+  height: 5em;
+  border: solid white 2px;
+}
+.sectionA-buttons:hover {
+  background-color: #001540;
+  border: solid orange 4px;
 }
 
 /* ######################################## */
@@ -353,8 +432,7 @@ header {
   background: linear-gradient(to right, blue 10%, rgb(9, 12, 184));
   box-shadow: 0px 0px 10px yellow;
 }
-.button_astonaut_choice {
-}
+
 .screen-controller {
   margin-top: -100px;
 }

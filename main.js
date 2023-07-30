@@ -87,7 +87,7 @@ gsap.to(".moon", {
   },
 });
 
-gsap.to(".sectionA_container_titles", {
+gsap.to(".sectionA_container_services", {
   y: -200,
   duration: 1,
   scrollTrigger: {
@@ -98,11 +98,11 @@ gsap.to(".sectionA_container_titles", {
   },
 });
 
-gsap.to(".autoTxt", {
+gsap.to(".auto_text", {
   scrollTrigger: {
     trigger: ".sectionB",
-    start: "top -30%",
-    end: "top ",
+    start: "top",
+    end: "top 30% ",
     toggleActions: "play none reverse none",
   },
 });
@@ -124,15 +124,15 @@ const headerMenu = document.querySelector(".header_menu_invisible");
 const headerMenuVisible = document.querySelector(".header_menu");
 
 satelit.addEventListener("click", function () {
- 
   this.dataset.menu = this.dataset.menu == "false" ? "true" : "false";
   if (this.dataset.menu == "true") {
     headerMenu.classList.add("header_menu");
     headerMenu.style.opacity = 1;
-     satelit.style.animationName ="noBounce";
+    satelit.style.animationName = "noBounce";
+    satelit.style.translateX = "0px";
   } else {
     headerMenu.classList.remove("header_menu");
-      satelit.style.animationName = "bounce";
+    satelit.style.animationName = "bounce";
   }
 });
 
