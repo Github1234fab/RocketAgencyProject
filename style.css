@@ -25,7 +25,7 @@ header {
   position: relative;
   height: 650px;
   width: 100vw;
-  background-color: #001540;
+  background-color: #021334;
   display: grid;
   overflow: hidden;
   box-shadow: 5px 0px 5px black;
@@ -44,7 +44,7 @@ header {
 }
 .title {
   font-size: 3em;
-  color: white;
+  color: #f1f1e6;
   font-family: Tektur;
   text-align: justify;
   font-weight: 900;
@@ -54,7 +54,7 @@ header {
 }
 .title span {
   font-size: 0.3em;
-  color: white;
+  color: #f1f1e6;
   font-family: Kanit;
   font-weight: 200;
   width: 100%;
@@ -63,7 +63,7 @@ header {
 }
 .subtitle {
   font-size: 1em;
-  color: white;
+  color: #f1f1e6;
   font-family: Kanit;
   letter-spacing: 5px;
   margin-top: -40px;
@@ -100,32 +100,35 @@ header {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 110%;
   z-index: 9999999;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-left: 120px;
 }
 .promise {
-  color: rgb(255, 255, 255);
-  font-size: 1.5em;
+  color: #f1f1e6;
+  font-weight: 500;
+  font-size: 1.8em;
   font-family: Kanit;
-  line-height: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
 }
 .promise-subTitle {
-  color: rgb(255, 189, 189);
+  color: #f1f1e6;
   font-size: 1em;
   font-family: Kanit;
 }
 .socialPromise {
-  color: rgb(250, 108, 108);
+  color: #dd7062;
   font-size: 0.8em;
   font-family: Kanit;
   margin-bottom: 40px;
 }
 .promiseValue-cta {
-  background-color: rgb(210, 145, 23);
-  color: #ffffff;
+  background-color: #dd7062;
+  color: #f1f1e6;
   font-weight: 100;
   font-size: 1.1em;
   padding: 15px;
@@ -134,9 +137,12 @@ header {
   border-radius: 3%;
   z-index: 9999999;
   border: none;
+  transition: 0.3s ease-in-out;
 }
 .promiseValue-cta:hover {
-  background-color: orange;
+  /* background-color: #FDB05A;
+  color: black; */
+  transform: scale(1.1);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ELEMENTS HEADER */
@@ -218,7 +224,7 @@ header {
 
 .section-featuresBenefits {
   height: 800px;
-  background-color: #8c7f0e;
+  background-color: #d1a617;
   color: #ffffff;
   margin-top: 5px;
   box-shadow: 3px 0px 5px black;
