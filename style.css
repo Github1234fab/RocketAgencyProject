@@ -56,7 +56,7 @@ header {
   font-size: 0.3em;
   color: white;
   font-family: Kanit;
-  font-weight: 900;
+  font-weight: 200;
   width: 100%;
   letter-spacing: 3px;
   border-bottom: solid 1px orange;
@@ -64,18 +64,26 @@ header {
 .subtitle {
   font-size: 1em;
   color: white;
-  font-family: lato;
+  font-family: Kanit;
   letter-spacing: 5px;
   margin-top: -40px;
 }
-.header_menu_invisible {
-  visibility: hidden;
+
+.header_menu {
+  grid-column: 1/4;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 150px;
 }
 .menu_title {
-  color: white;
-  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
   font-family: Agdasima;
-  font-weight: 200;
+  font-weight: 100;
   transform: translateX(0px);
   text-shadow: 0px 0px 100px white;
   line-height: 60px;
@@ -83,117 +91,79 @@ header {
 }
 .menu_title:hover {
   color: #fddd55;
-  border-bottom: #6ffca4 solid 5px;
+  border-bottom: #6ffca4 solid 1px;
   border-radius: 10px;
-  /* animation: menu_title_animation 0.2s ease-in-out;
-  animation-delay: 0.8s; */
-}
-
-@keyframes menu_title_animation {
-  0%,
-  100% {
-    transform: translateX(-4px);
-  }
-  40% {
-    transform: translateX(2px);
-  }
-  60% {
-    transform: translateX(-2px);
-  }
-}
-
-.header_menu {
-  grid-column: 1/4;
-  grid-row: 1;
-  color: white;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content:space-evenly ;
-  width: 100%;
-  z-index: 99999;
-  visibility: visible;
-  opacity: 0.5;
-  transition-property: opacity;
-  transition-duration: 1s;
 }
 
 .container-promiseValue {
   grid-column: 2;
-  grid-row: 2/4;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  height: 80%;
+  height: 100%;
   z-index: 9999999;
+  margin-top: 20px;
 }
 .promise {
-  color: white;
-  font-size: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
   font-family: Kanit;
-  line-height: 40px;
+  line-height: 30px;
 }
 .promise-subTitle {
-  color: white;
+  color: rgb(255, 189, 189);
   font-size: 1em;
   font-family: Kanit;
 }
 .socialPromise {
-  color: white;
-  font-size: 0.7em;
- font-family: Kanit;
+  color: rgb(250, 108, 108);
+  font-size: 0.8em;
+  font-family: Kanit;
+  margin-bottom: 40px;
 }
 .promiseValue-cta {
-  background-color: #fddd55;
-  color: #001540;
-  border: #ffffff 4px solid;
-  padding: 20px;
-  border-radius: 5%;
+  background-color: rgb(210, 145, 23);
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 1.1em;
+  padding: 15px;
+   font-family: Kanit;
+   font-weight: 500;
+  border-radius: 3%;
   z-index: 9999999;
-  width: 20%;
+  border: none;
 }
-.promiseValue-cta:hover{
+.promiseValue-cta:hover {
   background-color: orange;
 }
-.wrapper-socialPromise{
+/* .wrapper-socialPromise{
   background: linear-gradient(to left, blue, white);
   z-index: 99999999;
   padding: 20px;
-}
+} */
 
 .satelit {
   grid-column: 1/4;
   grid-row: 2/4;
   height: 5em;
   transition: 0.2s ease-in-out;
-  margin-top: 220px;
-  margin-left: 100px;
+  margin-top: 300px;
+  margin-left: 200px;
   transform: translateX(0px);
   z-index: 999999;
-  animation: bounce 14s ease-in-out;
+  animation: circle-rotation 24s ease-in-out;
   animation-iteration-count: infinite;
 }
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateX(220px);
+@keyframes circle-rotation {
+  from {
+    transform: rotate(0deg) translateX(180px) rotate(0deg);
   }
-  50% {
-    transform: translateX(-30px);
+  to {
+    transform: rotate(360deg) translateX(180px) rotate(-360deg);
   }
 }
-@keyframes noBounce {
-  0%,
-  100% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(0px);
-  }
-}
-
 .rocket {
   height: 45px;
 }
@@ -244,14 +214,10 @@ header {
   grid-column: 1;
 }
 
-
-
 /* ######################################## */
 /* ######################################## */
 /* ######################################## */
 /* ######################################## */
-
-
 
 .sectionA {
   margin-top: 10px;
@@ -326,7 +292,7 @@ header {
   padding: 30px;
 }
 .sectionA-wrapper-services:hover {
-  background-color:orange ;
+  background-color: orange;
 }
 .sectionA_title {
   font-family: Kanit;
@@ -337,7 +303,7 @@ header {
   background-color: transparent;
   color: white;
 }
-.sectionA-titles-p{
+.sectionA-titles-p {
   font-family: Kanit;
   font-size: 1em;
   color: white;
