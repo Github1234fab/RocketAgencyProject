@@ -118,9 +118,8 @@ gsap.to(".featuresBenefits-h2", {
   },
 });
 gsap.to(".featuresBenefits-h3", {
-  x: 800,
+  x: 50,
   duration: 2,
-
   scrollTrigger: {
     trigger: ".header",
     start: "top -20%",
@@ -129,7 +128,7 @@ gsap.to(".featuresBenefits-h3", {
   },
 });
 gsap.to(".featuresBenefits-h4", {
-  x: 80,
+  x: 40,
   duration: 3,
   scrollTrigger: {
     trigger: ".header",
@@ -138,13 +137,58 @@ gsap.to(".featuresBenefits-h4", {
     toggleActions: "play none reverse none",
   },
 });
-gsap.to(".sectionA_container_services ", {
-  gap: 150,
+gsap.to(".service1 ", {
+  x: 150,
+  marginBottom: 50,
   duration: 2,
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "top -40%",
+    start: "top -200px",
     end: "center -100%",
+    toggleActions: "play none reverse none",
+  },
+});
+gsap.to(".service2 ", {
+  x: -150,
+  marginBottom: 50,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "top -400px",
+    end: "center -100%",
+    toggleActions: "play none reverse none",
+  },
+});
+gsap.to(".service3 ", {
+  x: 150,
+  marginBottom: 50,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "top -600px",
+    end: "center -100%",
+    toggleActions: "play none reverse none",
+  },
+});
+gsap.to(".service4 ", {
+  x: -150,
+  marginBottom: 50,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "top -800px",
+    end: "center -100%",
+    toggleActions: "play none reverse none",
+  },
+});
+gsap.to(".service5 ", {
+  x: 150,
+  marginBottom: 50,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "top -1000px",
+    end: "bottom",
     toggleActions: "play none reverse none",
   },
 });
@@ -181,7 +225,6 @@ const txt = "Le succès de votre communication \ndépend de notre qualité d'éc
 
 autoText.textContent = txt;
 
-
 // buttons.forEach((buttons) =>
 //   buttons.addEventListener("click", function () {
 //     this.dataset.choice = this.dataset.choice == "1" ? "2" : "1";
@@ -197,7 +240,6 @@ autoText.textContent = txt;
 //     }
 //   })
 // );
-
 
 // const satelit = document.querySelector(".satelit");
 // const headerMenu = document.querySelector(".header_menu_invisible");

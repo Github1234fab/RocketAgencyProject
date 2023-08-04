@@ -88,6 +88,7 @@ header {
   text-shadow: 0px 0px 100px white;
   line-height: 60px;
   text-align: center;
+  text-decoration: none;
 }
 .menu_title:hover {
   color: #fddd55;
@@ -109,7 +110,7 @@ header {
 }
 .promise {
   color: #f1f1e6;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.8em;
   font-family: Kanit;
   line-height: 40px;
@@ -244,12 +245,12 @@ header {
   font-weight: 400;
   transform: translateX(2000px);
   background-color: #d1a617;
-  text-shadow: 5px 7px 6px #392d06;
+  text-shadow: 2px 3px 10px #392d06;
 }
 .featuresBenefits-h3 {
   color: white;
   font-family: Kanit;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 100;
   transform: translateX(-1000px);
 }
@@ -500,6 +501,38 @@ header {
   color: white;
   background: linear-gradient(to top, #021334, #010e28);
   box-shadow: 3px 0px 5px black;
+}
+
+.footer-title {
+  font-size: 3em;
+  color: #f1f1e6;
+  font-family: Tektur;
+  text-align: center;
+  font-weight: 900;
+  width: 100%;
+  line-height: 30px;
+  text-shadow: 0px 0px 130px white;
+}
+.footer-title span {
+  font-size: 0.5em;
+  color: #f1f1e6;
+  font-family: Kanit;
+  text-align: center;
+  font-weight: 100;
+  width: 100%;
+  line-height: 20px;
+  text-shadow: 0px 0px 130px white;
+  border-bottom: solid 1px orange;
+}
+.social-icon{
+  font-size: 2em;
+  color:  #dd7062;
+  padding: 10px;
+
+}
+nav{
+  display: flex;
+  flex-direction: column;
 }
 
 /* #######################################################################################################################################################@####*/
