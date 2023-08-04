@@ -120,7 +120,7 @@ gsap.to(".featuresBenefits-h2", {
 gsap.to(".featuresBenefits-h3", {
   x: 800,
   duration: 2,
-  
+
   scrollTrigger: {
     trigger: ".header",
     start: "top -20%",
@@ -138,23 +138,16 @@ gsap.to(".featuresBenefits-h4", {
     toggleActions: "play none reverse none",
   },
 });
-
-// const satelit = document.querySelector(".satelit");
-// const headerMenu = document.querySelector(".header_menu_invisible");
-// const headerMenuVisible = document.querySelector(".header_menu");
-
-// satelit.addEventListener("click", function () {
-//   this.dataset.menu = this.dataset.menu == "false" ? "true" : "false";
-//   if (this.dataset.menu == "true") {
-//     headerMenu.classList.add("header_menu");
-//     headerMenu.style.opacity = 1;
-//     satelit.style.animationName = "noBounce";
-//     satelit.style.translateX = "0px";
-//   } else {
-//     headerMenu.classList.remove("header_menu");
-//     satelit.style.animationName = "bounce";
-//   }
-// });
+gsap.to(".sectionA_container_services ", {
+  gap: 150,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "top -40%",
+    end: "center -100%",
+    toggleActions: "play none reverse none",
+  },
+});
 
 const sonar = document.querySelector(".sonar");
 const menuTitle = document.querySelectorAll(".menu_title");
@@ -182,23 +175,43 @@ const buttons = document.querySelectorAll(".button_astonaut_choice");
 console.log(buttons);
 const autoTextAnswer = document.querySelector(".auto_text_answer");
 
-const txt = "Do you feel ready to become an astronaut ?";
-const txt2 = "Don't worry. We will prepare you to become the greatest of astronauts :)";
-const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
+const txt = "Le succès de votre communication \ndépend de notre qualité d'écoute. \nTout dépend de vos besoins, de votre budget, de votre projet et de vos envies";
+// const txt2 = "Don't worry. We will prepare you to become the greatest of astronauts :)";
+// const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
+
 autoText.textContent = txt;
 
-buttons.forEach((buttons) =>
-  buttons.addEventListener("click", function () {
-    this.dataset.choice = this.dataset.choice == "1" ? "2" : "1";
 
-    if (this.dataset.choice === "2") {
-      console.log(txt2);
-      autoTextAnswer.textContent = txt2;
-      autoTextAnswer.classList.add("auto_text");
-    } else if (this.dataset.choice === "1") {
-      autoTextAnswer.textContent = txt3;
-      autoTextAnswer.classList.add("auto_text");
-      console.log(txt3);
-    }
-  })
-);
+// buttons.forEach((buttons) =>
+//   buttons.addEventListener("click", function () {
+//     this.dataset.choice = this.dataset.choice == "1" ? "2" : "1";
+
+//     if (this.dataset.choice === "2") {
+//       console.log(txt2);
+//       autoTextAnswer.textContent = txt2;
+//       autoTextAnswer.classList.add("auto_text");
+//     } else if (this.dataset.choice === "1") {
+//       autoTextAnswer.textContent = txt3;
+//       autoTextAnswer.classList.add("auto_text");
+//       console.log(txt3);
+//     }
+//   })
+// );
+
+
+// const satelit = document.querySelector(".satelit");
+// const headerMenu = document.querySelector(".header_menu_invisible");
+// const headerMenuVisible = document.querySelector(".header_menu");
+
+// satelit.addEventListener("click", function () {
+//   this.dataset.menu = this.dataset.menu == "false" ? "true" : "false";
+//   if (this.dataset.menu == "true") {
+//     headerMenu.classList.add("header_menu");
+//     headerMenu.style.opacity = 1;
+//     satelit.style.animationName = "noBounce";
+//     satelit.style.translateX = "0px";
+//   } else {
+//     headerMenu.classList.remove("header_menu");
+//     satelit.style.animationName = "bounce";
+//   }
+// });
