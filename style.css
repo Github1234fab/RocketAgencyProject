@@ -533,7 +533,7 @@ header {
   border-bottom: solid 1px orange;
 }
 .container-footer-title{
-  border: solid #d1a617 1px;
+  /* border: solid #d1a617 1px; */
   padding: 40px;
 }
 .container-footer-title p {
