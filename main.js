@@ -107,6 +107,37 @@ gsap.to(".auto_text", {
   },
 });
 
+gsap.to(".featuresBenefits-h2", {
+  x: 30,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top -20%",
+    end: "center 30% ",
+    toggleActions: "play none reverse none",
+  },
+});
+gsap.to(".featuresBenefits-h3", {
+  x: 800,
+  duration: 2,
+  
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top -20%",
+    end: "center 30% ",
+    toggleActions: "play none reverse none",
+  },
+});
+gsap.to(".featuresBenefits-h4", {
+  x: 80,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top -20%",
+    end: "center 30% ",
+    toggleActions: "play none reverse none",
+  },
+});
 
 // const satelit = document.querySelector(".satelit");
 // const headerMenu = document.querySelector(".header_menu_invisible");
