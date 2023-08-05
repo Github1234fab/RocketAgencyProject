@@ -231,16 +231,28 @@ autoText.textContent = txt;
 let wrapperFeatures = document.querySelector(".wrapper-features-img");
 let backgroundColorFeatures = document.querySelector(".backgroundColor-features-img1");
 
+// Écouter l'événement "mouseenter"
 wrapperFeatures.addEventListener("mouseenter", function () {
-  this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
-  if (this.dataset.backgroundColorFeatures == "true") {
-    backgroundColorFeatures.style.transform = "translateX(0px)";
-    backgroundColorFeatures.style.transition = "1s";
-  } else {
-    backgroundColorFeatures.style.transform = "translateX(150px)";
-    backgroundColorFeatures.style.transition = "1s";
-  }
+  backgroundColorFeatures.style.transform = "translateX(0px)";
+  backgroundColorFeatures.style.transition = "1s";
 });
+
+// Écouter l'événement "mouseleave"
+wrapperFeatures.addEventListener("mouseleave", function () {
+  backgroundColorFeatures.style.transform = "translateX(150px)";
+  backgroundColorFeatures.style.transition = "1s";
+});
+
+// wrapperFeatures.addEventListener("mouseenter", function () {
+//   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
+//   if (this.dataset.backgroundColorFeatures == "true") {
+//     backgroundColorFeatures.style.transform = "translateX(0px)";
+//     backgroundColorFeatures.style.transition = "1s";
+//   } else {
+//     backgroundColorFeatures.style.transform = "translateX(150px)";
+//     backgroundColorFeatures.style.transition = "1s";
+//   }
+// });
 
 // buttons.forEach((buttons) =>
 //   buttons.addEventListener("click", function () {

@@ -296,12 +296,11 @@ header {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  z-index:0;
-
+  z-index: 0;
 }
 .features-img1 {
   position: absolute;
-  background-image: url(./assets/pngegg\ \(99\).png);
+  background-image: url(./assets/pngegg\\(99\).png);
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: center;
@@ -310,26 +309,17 @@ header {
   border-radius: 50%;
   border: #d1a617 solid 3px;
   transform: rotate(-10deg);
-    z-index:99;
+  z-index: 99;
 }
 .backgroundColor-features-img1 {
   position: absolute;
   top: 0px;
- transform: translateX(150px) ;
+  transform: translateX(150px);
   background-color: blue;
   height: 200px;
   width: 200px;
   z-index: 0;
 }
-
-
-
-
-
-
-
-
-
 
 .container-features-img2 {
   background-image: url(./assets/pngegg\ -\ 2023-08-03T233538.155.png);
