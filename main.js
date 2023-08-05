@@ -196,9 +196,7 @@ gsap.to(".service5 ", {
 
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
-  x: 150,
-  marginBottom: 50,
-  duration: 2,
+
   scrollTrigger: {
     trigger: ".sectionCTA",
     start: "bottom",
@@ -210,7 +208,7 @@ gsap.to(".auto_text", {
         delay: 200,
       });
 
-      typewriter.typeString("Votre succes ").pauseFor(800).typeString("depend de notre ").pauseFor(500).typeString("qualite d'ecoute ").start();
+      typewriter.typeString("Votre succes ").pauseFor(2000).typeString("depend de notre ").pauseFor(500).typeString("qualite ").pauseFor(3000).typeString("d'ecoute . ").start();
     },
   },
 });
@@ -236,13 +234,14 @@ menuTitle.forEach(function (menuTitle) {
   });
 });
 
+
+
 const buttons = document.querySelectorAll(".button_astonaut_choice");
 console.log(buttons);
 const autoTextAnswer = document.querySelector(".auto_text_answer");
 
 const txt = "Le succès de votre communication dépend de notre qualité d'écoute.";
-// const txt2 = "Don't worry. We will prepare you to become the greatest of astronauts :)";
-// const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
+
 
 // ###################################################### animation background features img1
 
@@ -294,6 +293,20 @@ wrapperFeatures3.addEventListener("mouseleave", function () {
   backgroundColorFeatures3.style.transform = "translateX(150px)";
   backgroundColorFeatures3.style.transition = "1s";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // wrapperFeatures.addEventListener("mouseenter", function () {
 //   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
