@@ -17,6 +17,11 @@ html {
   src: url("./assets/VCR_OSD_MONO_1.001-1.ttf") format("truetype");
   /* Vous pouvez également spécifier les autres formats de police ici, si nécessaire. */
 }
+@font-face {
+  font-family: "Minecraft";
+  src: url("./assets/Minecraft.ttf") format("truetype");
+  /* Vous pouvez également spécifier les autres formats de police ici, si nécessaire. */
+}
 body {
   scroll-behavior: smooth;
 }
@@ -276,6 +281,7 @@ header {
   font-weight: 500;
   color: #827966;
   font-size: 1.8em;
+  margin-top: 20px;
 }
 .benefit {
   font-family: Kanit;
@@ -297,6 +303,10 @@ header {
   width: 150px;
   border-radius: 50%;
   z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+.wrapper-features-img1:hover {
+  transform: scale(1.1);
 }
 .features-img1 {
   position: absolute;
@@ -327,6 +337,10 @@ header {
   width: 150px;
   border-radius: 50%;
   z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+.wrapper-features-img2:hover {
+  transform: scale(1.1);
 }
 .features-img2 {
   position: absolute;
@@ -339,7 +353,7 @@ header {
   border-radius: 50%;
   border: #d1a617 solid 3px;
   transform: rotate(25deg);
-    z-index: 99;
+  z-index: 99;
 }
 .backgroundColor-features-img2 {
   position: absolute;
@@ -357,6 +371,10 @@ header {
   width: 150px;
   border-radius: 50%;
   z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+.wrapper-features-img3:hover {
+  transform: scale(1.1);
 }
 .features-img3 {
   position: absolute;
@@ -368,7 +386,7 @@ header {
   width: 150px;
   border-radius: 50%;
   border: #d1a617 solid 3px;
-    z-index: 99;
+  z-index: 99;
 }
 .backgroundColor-features-img3 {
   position: absolute;
@@ -518,35 +536,31 @@ header {
   margin-top: 10px;
   box-shadow: 3px 0px 5px black;
 }
-.screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
-}
+
 .auto_text {
   color: #d1a617;
-  font-family: Handjet;
-  font-size: 1.5em;
+  font-family: Minecraft;
+  text-transform: uppercase;
+  font-size: 1em;
   animation: autoTxt 10s steps(50);
   overflow: hidden;
   white-space: nowrap;
   text-shadow: 0px 0px 60px rgb(158, 158, 251);
   margin-left: 10px;
   width: 100%;
-  height: 100%;
-  z-index: 2;
+  height: 50px;
   padding: 30px;
+  animation: autoTxt 10s ease-in-out steps(20);
+  border-right: 1px white solid;
+  letter-spacing: 5px;
 }
 
 @keyframes autoTxt {
-  0% {
-    width: 0;
+  from {
+    width: 0%;
   }
-  100% {
-    width: 100%;
+  to {
+    width: 900%;
   }
 }
 
@@ -629,6 +643,12 @@ header {
 }
 .social-icon {
   font-size: 2em;
+  color: #dd7062;
+  padding: 10px;
+  transition: .700s ease-in-out;
+}
+.social-icon:hover {
+  font-size: 2.5em;
   color: #dd7062;
   padding: 10px;
 }

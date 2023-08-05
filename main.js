@@ -1,6 +1,7 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
+
 for (let i = 0; i < 750; i++) {
   let starsA = document.createElement("div");
 
@@ -35,6 +36,7 @@ const rocketa = document.querySelector(".rocket");
 
 rockets.forEach((rocket, index) => {
   const playAudio = new Audio("./assets/sf_explosion_01.mp3");
+
 
   gsap.to(rocket, {
     y: -680,
@@ -97,16 +99,6 @@ gsap.to(".sectionA_container_services", {
     toggleActions: "play none reverse none",
   },
 });
-
-gsap.to(".auto_text", {
-  scrollTrigger: {
-    trigger: ".sectionB",
-    start: "top",
-    end: "top 30% ",
-    toggleActions: "play none reverse none",
-  },
-});
-
 gsap.to(".featuresBenefits-h2", {
   x: 30,
   duration: 2,
@@ -192,6 +184,34 @@ gsap.to(".service5 ", {
     toggleActions: "play none reverse none",
   },
 });
+gsap.to(".service5 ", {
+  x: 150,
+  marginBottom: 50,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "top -1000px",
+    end: "bottom",
+    toggleActions: "play none reverse none",
+  },
+});
+
+let autoTxt = document.querySelector(".auto_text");
+gsap.to(".auto_text", {
+  scrollTrigger: {
+    trigger: ".sectionCTA",
+    start: "bottom ",
+    end: "bottom 5%",
+    toggleActions: "play none reverse none",
+    scrub: "true",
+    onUpdate: function () {
+      autoTxt.textContent = "Votre succes depend de notre qualite d'ecoute. Et c'est la tout notre savoir faire.";
+    }
+  },
+});
+
+
+
 
 const sonar = document.querySelector(".sonar");
 const menuTitle = document.querySelectorAll(".menu_title");
@@ -214,8 +234,8 @@ menuTitle.forEach(function (menuTitle) {
   });
 });
 
-const autoText = document.querySelector(".auto_text");
-console.log(autoText);
+
+
 const buttons = document.querySelectorAll(".button_astonaut_choice");
 console.log(buttons);
 const autoTextAnswer = document.querySelector(".auto_text_answer");
@@ -223,9 +243,6 @@ const autoTextAnswer = document.querySelector(".auto_text_answer");
 const txt = "Le succès de votre communication dépend de notre qualité d'écoute.";
 // const txt2 = "Don't worry. We will prepare you to become the greatest of astronauts :)";
 // const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
-
-autoText.textContent = txt;
-
 
 
 
@@ -239,6 +256,7 @@ let backgroundColorFeatures1 = document.querySelector(".backgroundColor-features
 wrapperFeatures1.addEventListener("mouseenter", function () {
   backgroundColorFeatures1.style.transform = "translateX(0px)";
   backgroundColorFeatures1.style.transition = "1s";
+
 });
 
 // Écouter l'événement "mouseleave"
