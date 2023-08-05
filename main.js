@@ -231,7 +231,7 @@ autoText.textContent = txt;
 let wrapperFeatures = document.querySelector(".wrapper-features-img");
 let backgroundColorFeatures = document.querySelector(".backgroundColor-features-img1");
 
-wrapperFeatures.addEventListener("mouseover", function () {
+wrapperFeatures.addEventListener("mouseenter", function () {
   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
   if (this.dataset.backgroundColorFeatures == "true") {
     backgroundColorFeatures.style.transform = "translateX(0px)";
