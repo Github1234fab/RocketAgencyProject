@@ -1,7 +1,6 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
-
 for (let i = 0; i < 750; i++) {
   let starsA = document.createElement("div");
 
@@ -36,7 +35,6 @@ const rocketa = document.querySelector(".rocket");
 
 rockets.forEach((rocket, index) => {
   const playAudio = new Audio("./assets/sf_explosion_01.mp3");
-
 
   gsap.to(rocket, {
     y: -680,
@@ -190,7 +188,7 @@ gsap.to(".service5 ", {
   duration: 2,
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "top -1000px",
+    start: "top -1200px",
     end: "bottom",
     toggleActions: "play none reverse none",
   },
@@ -198,20 +196,24 @@ gsap.to(".service5 ", {
 
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
+  x: 150,
+  marginBottom: 50,
+  duration: 2,
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "bottom ",
-    end: "bottom 5%",
+    start: "bottom",
+    end: "bottom -10%",
     toggleActions: "play none reverse none",
-    scrub: "true",
     onUpdate: function () {
-      autoTxt.textContent = "Votre succes depend de notre qualite d'ecoute. Et c'est la tout notre savoir faire.";
-    }
+      var typewriter = new Typewriter(autoTxt, {
+        // loop: true,
+        delay: 200,
+      });
+
+      typewriter.typeString("Votre succes ").pauseFor(800).typeString("depend de notre ").pauseFor(500).typeString("qualite d'ecoute ").start();
+    },
   },
 });
-
-
-
 
 const sonar = document.querySelector(".sonar");
 const menuTitle = document.querySelectorAll(".menu_title");
@@ -234,8 +236,6 @@ menuTitle.forEach(function (menuTitle) {
   });
 });
 
-
-
 const buttons = document.querySelectorAll(".button_astonaut_choice");
 console.log(buttons);
 const autoTextAnswer = document.querySelector(".auto_text_answer");
@@ -243,9 +243,6 @@ const autoTextAnswer = document.querySelector(".auto_text_answer");
 const txt = "Le succès de votre communication dépend de notre qualité d'écoute.";
 // const txt2 = "Don't worry. We will prepare you to become the greatest of astronauts :)";
 // const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
-
-
-
 
 // ###################################################### animation background features img1
 
@@ -256,7 +253,6 @@ let backgroundColorFeatures1 = document.querySelector(".backgroundColor-features
 wrapperFeatures1.addEventListener("mouseenter", function () {
   backgroundColorFeatures1.style.transform = "translateX(0px)";
   backgroundColorFeatures1.style.transition = "1s";
-
 });
 
 // Écouter l'événement "mouseleave"
@@ -284,7 +280,6 @@ wrapperFeatures2.addEventListener("mouseleave", function () {
 
 // ###################################################### animation background features img3
 
-
 let wrapperFeatures3 = document.querySelector(".wrapper-features-img3");
 let backgroundColorFeatures3 = document.querySelector(".backgroundColor-features-img3");
 
@@ -299,40 +294,6 @@ wrapperFeatures3.addEventListener("mouseleave", function () {
   backgroundColorFeatures3.style.transform = "translateX(150px)";
   backgroundColorFeatures3.style.transition = "1s";
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // wrapperFeatures.addEventListener("mouseenter", function () {
 //   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";

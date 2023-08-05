@@ -541,7 +541,7 @@ header {
   color: #d1a617;
   font-family: Minecraft;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.3em;
   animation: autoTxt 10s steps(50);
   overflow: hidden;
   white-space: nowrap;
@@ -550,19 +550,19 @@ header {
   width: 100%;
   height: 50px;
   padding: 30px;
-  animation: autoTxt 10s ease-in-out steps(20);
   border-right: 1px white solid;
   letter-spacing: 5px;
 }
 
-@keyframes autoTxt {
+
+/* @keyframes autoTxt {
   from {
     width: 0%;
   }
   to {
     width: 900%;
   }
-}
+} */
 
 .container-socialProof {
   display: grid;
