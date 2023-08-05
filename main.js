@@ -196,19 +196,17 @@ gsap.to(".service5 ", {
 
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
-
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "bottom",
-    end: "bottom -10%",
+    start: "center 40%",
+    end: "bottom ",
     toggleActions: "play none reverse none",
     onUpdate: function () {
       var typewriter = new Typewriter(autoTxt, {
         // loop: true,
-        delay: 200,
       });
 
-      typewriter.typeString("Votre succes ").pauseFor(2000).typeString("depend de notre ").pauseFor(500).typeString("qualite ").pauseFor(3000).typeString("d'ecoute . ").start();
+      typewriter.changeDelay(50).typeString("Votre succes ").typeString("depend de notre ").pauseFor(400).typeString("qult ").deleteChars(5).typeString("qualite ").pauseFor(1000).typeString("d'ecoute . ").pauseFor(1000).typeString("C'est la le coeur meme ").pauseFor(500).typeString("de notre metier. ").start();
     },
   },
 });
@@ -250,7 +248,7 @@ let backgroundColorFeatures1 = document.querySelector(".backgroundColor-features
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures1.addEventListener("mouseenter", function () {
-  backgroundColorFeatures1.style.transform = "translateX(0px)";
+  backgroundColorFeatures1.style.transform = "translateX(-30px)";
   backgroundColorFeatures1.style.transition = "1s";
 });
 
@@ -267,7 +265,7 @@ let backgroundColorFeatures2 = document.querySelector(".backgroundColor-features
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures2.addEventListener("mouseenter", function () {
-  backgroundColorFeatures2.style.transform = "translateX(0px)";
+  backgroundColorFeatures2.style.transform = "translateX(-30px)";
   backgroundColorFeatures2.style.transition = "1s";
 });
 
@@ -284,7 +282,7 @@ let backgroundColorFeatures3 = document.querySelector(".backgroundColor-features
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures3.addEventListener("mouseenter", function () {
-  backgroundColorFeatures3.style.transform = "translateX(0px)";
+  backgroundColorFeatures3.style.transform = "translateX(-30px)";
   backgroundColorFeatures3.style.transition = "1s";
 });
 
