@@ -118,7 +118,7 @@ gsap.to(".featuresBenefits-h2", {
   },
 });
 gsap.to(".featuresBenefits-h3", {
-  x: 50,
+  x: 40,
   duration: 2,
   scrollTrigger: {
     trigger: ".header",
@@ -225,6 +225,22 @@ const txt = "Le succès de votre communication dépend de notre qualité d'écou
 // const txt3 = "Awesome! It's time for you to come and meet us. Don't forget your jumpsuit before coming to see us! :))";
 
 autoText.textContent = txt;
+
+// ###################################################### animation background features img
+
+let wrapperFeatures = document.querySelector(".wrapper-features-img");
+let backgroundColorFeatures = document.querySelector(".backgroundColor-features-img1");
+
+wrapperFeatures.addEventListener("mouseover", function () {
+  this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
+  if (this.dataset.backgroundColorFeatures == "true") {
+    backgroundColorFeatures.style.transform = "translateX(0px)";
+    backgroundColorFeatures.style.transition = "1s";
+  } else {
+    backgroundColorFeatures.style.transform = "translateX(150px)";
+    backgroundColorFeatures.style.transition = "1s";
+  }
+});
 
 // buttons.forEach((buttons) =>
 //   buttons.addEventListener("click", function () {
