@@ -226,22 +226,95 @@ const txt = "Le succès de votre communication dépend de notre qualité d'écou
 
 autoText.textContent = txt;
 
-// ###################################################### animation background features img
 
-let wrapperFeatures = document.querySelector(".wrapper-features-img");
-let backgroundColorFeatures = document.querySelector(".backgroundColor-features-img1");
+
+
+
+// ###################################################### animation background features img1
+
+let wrapperFeatures1 = document.querySelector(".wrapper-features-img1");
+let backgroundColorFeatures1 = document.querySelector(".backgroundColor-features-img1");
 
 // Écouter l'événement "mouseenter"
-wrapperFeatures.addEventListener("mouseenter", function () {
-  backgroundColorFeatures.style.transform = "translateX(0px)";
-  backgroundColorFeatures.style.transition = "1s";
+wrapperFeatures1.addEventListener("mouseenter", function () {
+  backgroundColorFeatures1.style.transform = "translateX(0px)";
+  backgroundColorFeatures1.style.transition = "1s";
 });
 
 // Écouter l'événement "mouseleave"
-wrapperFeatures.addEventListener("mouseleave", function () {
-  backgroundColorFeatures.style.transform = "translateX(150px)";
-  backgroundColorFeatures.style.transition = "1s";
+wrapperFeatures1.addEventListener("mouseleave", function () {
+  backgroundColorFeatures1.style.transform = "translateX(150px)";
+  backgroundColorFeatures1.style.transition = "1s";
 });
+
+// ###################################################### animation background features img2
+
+let wrapperFeatures2 = document.querySelector(".wrapper-features-img2");
+let backgroundColorFeatures2 = document.querySelector(".backgroundColor-features-img2");
+
+// Écouter l'événement "mouseenter"
+wrapperFeatures2.addEventListener("mouseenter", function () {
+  backgroundColorFeatures2.style.transform = "translateX(0px)";
+  backgroundColorFeatures2.style.transition = "1s";
+});
+
+// Écouter l'événement "mouseleave"
+wrapperFeatures2.addEventListener("mouseleave", function () {
+  backgroundColorFeatures2.style.transform = "translateX(150px)";
+  backgroundColorFeatures2.style.transition = "1s";
+});
+
+// ###################################################### animation background features img3
+
+
+let wrapperFeatures3 = document.querySelector(".wrapper-features-img3");
+let backgroundColorFeatures3 = document.querySelector(".backgroundColor-features-img3");
+
+// Écouter l'événement "mouseenter"
+wrapperFeatures3.addEventListener("mouseenter", function () {
+  backgroundColorFeatures3.style.transform = "translateX(0px)";
+  backgroundColorFeatures3.style.transition = "1s";
+});
+
+// Écouter l'événement "mouseleave"
+wrapperFeatures3.addEventListener("mouseleave", function () {
+  backgroundColorFeatures3.style.transform = "translateX(150px)";
+  backgroundColorFeatures3.style.transition = "1s";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // wrapperFeatures.addEventListener("mouseenter", function () {
 //   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
