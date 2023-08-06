@@ -241,7 +241,6 @@ header {
   margin-top: 10px;
   box-shadow: 3px 0px 5px black;
   display: flex;
-  padding: 20px;
   justify-content: space-between;
   flex-direction: column;
   overflow: hidden;
@@ -727,25 +726,23 @@ nav {
     font-size: 1.1em;
     line-height: 30px;
   }
+  .container-promiseValue {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: -70px;
+    margin-left: 0px;
 
-.container-promiseValue {
-  grid-column: 1;
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  margin-top: -70px;
-  margin-left: 0px;
-
-  z-index: 9999;
-}
+    z-index: 9999;
+  }
   .wrapper-socialPromise {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-     
   }
   .promise {
     color: #f1f1e6;
@@ -764,7 +761,7 @@ nav {
     text-align: center;
     margin-bottom: 20px;
 
-        visibility: hidden;
+    visibility: hidden;
   }
   .socialPromise {
     color: #dd7062;
@@ -781,10 +778,10 @@ nav {
     padding: 10px;
     font-family: Kanit;
     font-weight: 500;
-    border-radius: 3---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     z-index: 9999999;
     border: none;
     transition: 0.3s ease-in-out;
+    z-index: 9999999;
   }
   .promiseValue-cta:hover {
     /* background-color: #FDB05A;
@@ -823,106 +820,31 @@ nav {
     transform: rotate(182deg);
     filter: blur(3px);
   }
+  .featuresBenefits-h2 {
+    font-size: 4em;
+  }
+  .featuresBenefits-h3 {
+    font-size: 2em;
+  }
+  .featuresBenefits-h4 {
+    font-size: 3em;
+  }
+ .section-featuresBenefits {
+  background: linear-gradient(to left, rgb(1, 11, 31), rgba(2, 19, 52, 1));
+  color: #ffffff;
+  margin-top: 10px;
+  box-shadow: 3px 0px 5px black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  /* width: 100vw; */
 }
-
-/* header {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-  }
-  .satelit {
-    height: 80px;
-    width: 80px;
-    margin-top: -270px;
-  }
-  .moon {
-    top: 0px;
-    left: 0px;
-    height: 0%;
-  }
-
-  .header_title {
-    display: flex;
-    flex-direction: column;
-    margin-top: 250px;
-    margin-left: 40px;
-    z-index: 9999999;
-    width: 400px;
-  }
-  .title {
-    font-size: 2.7em;
-    line-height: 17px;
-  }
-  .title span {
-    font-size: 0.3em;
-    color: white;
-    font-family: Bebas Neue;
-    text-align: justify;
-    font-weight: 900;
-    width: 100%;
-    letter-spacing: 3px;
-    border-bottom: solid 1px orange;
-  }
-
-  .subtitle {
-    width: 100%;
-    font-size: 0.7em;
-    letter-spacing: 3px;
-  }
-  .header_menu {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-left: 240px;
-    width: 23%;
-    height: auto;
-    z-index: 99999;
-    visibility: visible;
-    margin-top: -200px;
-    opacity: 0.5;
-    transition-property: opacity;
-    transition-duration: 1s;
-  }
-  .menu_title {
-    width: 100%;
-    color: white;
-    font-size: 1em;
-    font-family: Agdasima;
-    font-weight: 200;
-    transform: translateX(0px);
-    text-shadow: 0px 0px 100px white;
-    line-height: 50px;
-  }
-  .marquee_txt {
-    margin-top: 40px;
-    font-size: 6em;
-  }
-  .sectionA {
-    margin-top: 10px;
-    min-height: 500px;
-    margin-bottom: 10px;
-    background-image: url("./assets/pngegg\ \(72\).png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: saturate(100%);
-    background-color: orange;
-    box-shadow: 3px 0px 5px black;
-  }
-  .sectionA_container_titles {
-    display: grid;
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 100px;
-    height: auto;
-  }
-  .sectionA_title {
-    font-family: Agdasima;
-    font-size: 1.8em;
-    padding: 30px;
-  }
-} */
-
-/* ######################################## */
+.container-features {
+  display: flex;
+ margin: auto;
+  width: 100%;
+  flex-direction: column;
+}
+}

@@ -182,17 +182,74 @@ gsap.to(".service5 ", {
     toggleActions: "play none reverse none",
   },
 });
-gsap.to(".service5 ", {
-  x: 150,
-  marginBottom: 50,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".sectionCTA",
-    start: "top -1200px",
-    end: "bottom",
-    toggleActions: "play none reverse none",
-  },
-});
+
+
+
+
+if (window.innerWidth < 768) {
+  gsap.to(".service1 ", {
+    x: 50,
+    marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -200px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service2 ", {
+    x: -50,
+    marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -400px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service3 ", {
+    x: 50,
+    marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -600px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service4 ", {
+    x: -50,
+    marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -800px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service5 ", {
+    x: 50,
+    marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -1000px",
+      end: "bottom",
+      toggleActions: "play none reverse none",
+    },
+  });
+}
+
+
+
+
+
+
+
 
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
@@ -315,7 +372,7 @@ menuIcon.addEventListener("click", function () {
      console.log("nok");
     headerMenu.style.transform = "translateY(-150px)";
   }
-  headerMenu.style.transition = "transform 2s ease-in-out";
+  headerMenu.style.transition = "transform 1s ease-in-out";
 });
 
 
