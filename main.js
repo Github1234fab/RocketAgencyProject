@@ -309,7 +309,7 @@ let headerMenu = document.querySelector(".header_menu");
 menuIcon.addEventListener("click", function () {
   this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
   if (this.dataset.menuIcon == "true") {
-    headerMenu.style.transform = "translateY(0px)";
+    headerMenu.style.transform = "translateY(10px)";
     console.log("ok")
   } else {
      console.log("nok");
