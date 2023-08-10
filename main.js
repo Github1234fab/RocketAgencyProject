@@ -1,20 +1,20 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
-for (let i = 0; i < 750; i++) {
-  let starsA = document.createElement("div");
+// for (let i = 0; i < 750; i++) {
+//   let starsA = document.createElement("div");
 
-  starsA.classList.add("stars");
-  starsA.style.width = Math.floor(Math.random() * 1 + 1) + "px";
-  starsA.style.left = Math.random() * innerWidth + "px";
-  starsA.style.top = Math.random() * innerWidth + "px";
-  starsA.style.backgroundColor = "yellow";
-  if (window.innerWidth < 770) {
-    starsA.style.top = Math.random() * 1.5 * innerWidth + "px";
-  }
+//   starsA.classList.add("stars");
+//   starsA.style.width = Math.floor(Math.random() * 1 + 1) + "px";
+//   starsA.style.left = Math.random() * innerWidth + "px";
+//   starsA.style.top = Math.random() * innerWidth + "px";
+//   starsA.style.backgroundColor = "yellow";
+//   if (window.innerWidth < 770) {
+//     starsA.style.top = Math.random() * 1.5 * innerWidth + "px";
+//   }
 
-  header.appendChild(starsA);
-}
+//   header.appendChild(starsA);
+// }
 
 let rocket = document.querySelector(".rocket_wrapper");
 let flame = document.querySelector(".flame");
@@ -102,7 +102,7 @@ gsap.to(".featuresBenefits-h2", {
   duration: 2,
   scrollTrigger: {
     trigger: ".header",
-    start: "top -20%",
+    start: "top -30%",
     end: "center 30% ",
     toggleActions: "play none reverse none",
   },
@@ -133,7 +133,7 @@ gsap.to(".service1 ", {
   duration: 2,
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "top -200px",
+    start: "top -100px",
     end: "center -100%",
     toggleActions: "play none reverse none",
   },
@@ -255,9 +255,9 @@ let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "center 40%",
-    end: "bottom ",
-    toggleActions: "play none reverse none",
+    start: "center 10%",
+    end: "bottom 10%",
+    // toggleActions: "play none reverse none",
     onUpdate: function () {
       var typewriter = new Typewriter(autoTxt, {
         // loop: true,
