@@ -36,7 +36,7 @@ header {
   box-shadow: 5px 0px 5px black;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 50% 30%;
-  background-image: url(./assets/Capture\ d’écran\ 2023-08-10\ à\ 18.39.35.png);
+  background-image: url(./assets/Capture\ d’écran\ 2023-08-11\ à\ 11.26.00.png);
   background-size: cover;
 }
 .circle {
@@ -59,7 +59,7 @@ header {
 }
 
 .satelit {
-  height: 5em;
+  height: 3em;
   /* position: absolute; */
 }
 .header_title {
@@ -129,8 +129,8 @@ header {
 }
 .menu_title:hover {
   color: #fddd55;
-  border-bottom: #6ffca4 solid 1px;
-  border-radius: 10px;
+  border-bottom: #6ffca4 solid 2px;
+  /* border-radius: 10px; */
 }
 
 .container-promiseValue {
@@ -242,22 +242,20 @@ header {
 
 .section-featuresBenefits {
   background: linear-gradient(to left, rgb(1, 11, 31), rgba(2, 19, 52, 1));
-  color: #ffffff;
   margin-top: 10px;
   box-shadow: 3px 0px 5px black;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  overflow: hidden;
-  height: 100%;
+  min-height: 600px;
   width: 100vw;
+  overflow: hidden;
 }
 
 .featuresBenefits-h2 {
   margin-top: 40px;
   color: white;
   font-family: Kanit;
-  font-size: 10em;
+  font-size: 5em;
   font-weight: 400;
   transform: translateX(2000px);
   background-color: #d1a617;
@@ -267,7 +265,7 @@ header {
 .featuresBenefits-h3 {
   color: white;
   font-family: Kanit;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 100;
   transform: translateX(-1000px);
   margin-top: 50px;
@@ -276,7 +274,7 @@ header {
 .featuresBenefits-h4 {
   color: white;
   font-family: Kanit;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 700;
   transform: translateX(1500px);
   text-transform: capitalize;
@@ -284,29 +282,31 @@ header {
 
 .container-features {
   display: flex;
-  margin: 60px 20px 50px 20px;
   width: 100%;
-}
-.feature {
-  font-family: Kanit;
-  font-weight: 500;
-  color: #a3a098;
-  font-size: 1.8em;
-  margin-top: 20px;
-}
-.benefit {
-  font-family: Kanit;
-  font-weight: 200;
-  text-align: justify;
+  margin-top: 30px;
+  margin-left: 140px;
+  margin-bottom: 50px;
 }
 .wrapper-features1,
 .wrapper-features2,
 .wrapper-features3 {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: 20px;
+  /* width: 100%; */
 }
+.feature {
+  font-family: Kanit;
+  font-weight: 500;
+  color: #a3a098;
+  font-size: 1.8em;
+}
+.benefit {
+  font-family: Kanit;
+  font-weight: 200;
+  width: 60%;
+  color: white;
+}
+
 .wrapper-features-img1 {
   overflow: hidden;
   position: relative;
@@ -316,9 +316,7 @@ header {
   z-index: 0;
   transition: 0.5s ease-in-out;
 }
-/* .wrapper-features-img1:hover {
-  transform: scale(1.1);
-} */
+
 .features-img1 {
   position: absolute;
   background-image: url(./assets/pngegg\ -\ 2023-08-05T212123.499.png);
@@ -351,9 +349,7 @@ header {
   z-index: 0;
   transition: 0.5s ease-in-out;
 }
-/* .wrapper-features-img2:hover {
-  transform: scale(1.1);
-} */
+
 .features-img2 {
   position: absolute;
   background-image: url(./assets/pngegg\ -\ 2023-08-03T233538.155.png);
@@ -458,14 +454,7 @@ header {
   padding: 40px;
   z-index: 99999;
 }
-@keyframes marquee {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+
 .marquee_txt {
   margin-top: 40px;
   font-size: 5em;
@@ -476,10 +465,18 @@ header {
   color: transparent;
   -webkit-text-stroke: 3px;
   -webkit-text-stroke-color: #dd7062;
-  animation: marquee 18s linear infinite;
+  animation: marquee 5s linear infinite;
   padding: 20px;
   z-index: 99999;
   margin-bottom: 40px;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .marquee_txt span {
@@ -556,20 +553,23 @@ header {
 }
 
 .auto_text {
+  display: flex;
+  justify-content: center;
   color: #d1a617;
   font-family: Minecraft;
   text-transform: uppercase;
   font-size: 1.2em;
   animation: autoTxt 10s steps(50);
   overflow: hidden;
-  white-space: nowrap;
+  white-space: wrap;
   text-shadow: 0px 0px 60px rgb(158, 158, 251);
-  margin-left: 50px;
-  width: auto;
+  width: 100%;
   height: 50px;
-  padding: 70px;
   border-right: 1px white solid;
   letter-spacing: 5px;
+  margin-top: 50px;
+  padding: 30px;
+
 }
 
 .container-socialProof {
@@ -726,7 +726,7 @@ nav {
     box-shadow: 5px 0px 5px black;
     grid-template-columns: 1fr;
     grid-template-rows: 20% 40% 30%;
-    background-image: url(./assets/Capture\ d’écran\ 2023-08-10\ à\ 18.39.35.png);
+    background-image: url(./assets/Capture\ d’écran\ 2023-08-11\ à\ 11.26.00.png);
     background-size: cover;
   }
   .header_title {

@@ -1,7 +1,7 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
-// for (let i = 0; i < 750; i++) {
+// for (let i = 0; i <2700; i++) {
 //   let starsA = document.createElement("div");
 
 //   starsA.classList.add("stars");
@@ -255,8 +255,8 @@ let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
   scrollTrigger: {
     trigger: ".sectionCTA",
-    start: "center 10%",
-    end: "bottom 10%",
+    start: "top",
+    end: "center",
     // toggleActions: "play none reverse none",
     onUpdate: function () {
       var typewriter = new Typewriter(autoTxt, {
