@@ -188,7 +188,7 @@ gsap.to(".service5 ", {
 
 if (window.innerWidth < 768) {
   gsap.to(".service1 ", {
-    x: 50,
+    x: 30,
     marginBottom: 50,
     duration: 2,
     scrollTrigger: {
@@ -199,7 +199,7 @@ if (window.innerWidth < 768) {
     },
   });
   gsap.to(".service2 ", {
-    x: -50,
+    x: -30,
     marginBottom: 50,
     duration: 2,
     scrollTrigger: {
@@ -210,7 +210,7 @@ if (window.innerWidth < 768) {
     },
   });
   gsap.to(".service3 ", {
-    x: 50,
+    x: 30,
     marginBottom: 50,
     duration: 2,
     scrollTrigger: {
@@ -221,7 +221,7 @@ if (window.innerWidth < 768) {
     },
   });
   gsap.to(".service4 ", {
-    x: -50,
+    x: -30,
     marginBottom: 50,
     duration: 2,
     scrollTrigger: {
@@ -232,7 +232,7 @@ if (window.innerWidth < 768) {
     },
   });
   gsap.to(".service5 ", {
-    x: 50,
+    x: 30,
     marginBottom: 50,
     duration: 2,
     scrollTrigger: {
@@ -366,13 +366,13 @@ let headerMenu = document.querySelector(".header_menu");
 menuIcon.addEventListener("click", function () {
   this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
   if (this.dataset.menuIcon == "true") {
-    headerMenu.style.transform = "translateY(10px)";
+    headerMenu.style.transform = "translateY(120px)";
     console.log("ok")
   } else {
      console.log("nok");
-    headerMenu.style.transform = "translateY(-150px)";
+    headerMenu.style.transform = "translateY(-200px)";
   }
-  headerMenu.style.transition = "transform 1s ease-in-out";
+  headerMenu.style.transition = "transform 1.2s ease-in-out";
 });
 
 

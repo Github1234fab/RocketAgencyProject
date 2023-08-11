@@ -292,7 +292,6 @@ header {
 .wrapper-features3 {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
 }
 .feature {
   font-family: Kanit;
@@ -563,9 +562,8 @@ header {
   overflow: hidden;
   white-space: wrap;
   text-shadow: 0px 0px 60px rgb(158, 158, 251);
-  /* width: 100%; */
   height: 100px;
-line-height: 40px;
+  line-height: 40px;
   letter-spacing: 5px;
   margin-top: 100px;
   margin-left: 100px;
@@ -720,8 +718,8 @@ nav {
     position: relative;
     height: 650px;
     width: 100vw;
-    /* background: linear-gradient(to top, #021334, #010e28); */
-    display: grid;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     box-shadow: 5px 0px 5px black;
     grid-template-columns: 1fr;
@@ -734,10 +732,20 @@ nav {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 70px;
+    top: 470px;
     left: 100px;
     z-index: 99999;
     width: 100%;
+  }
+  .circle {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: rgba(0, 0, 255, 0);
+    border-radius: 50%;
+    margin-top: 400px;
+    margin-left: 0px;
+    animation: turn 80s infinite;
   }
   .menu-icon {
     color: white;
@@ -751,9 +759,10 @@ nav {
     display: flex;
     flex-direction: column;
     font-size: 1em;
-    transform: translateY(-150px);
+    transform: translateY(-100px);
     transition: transform 3s ease-in-out;
     z-index: 999999999;
+    margin-top: -900px;
   }
   .menu_title {
     font-size: 1.1em;
@@ -766,7 +775,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin-top: -70px;
+    margin-top: -200px;
     margin-left: 0px;
 
     z-index: 9999;
@@ -854,13 +863,13 @@ nav {
     filter: blur(3px);
   }
   .featuresBenefits-h2 {
-    font-size: 4em;
+    font-size: 3em;
   }
   .featuresBenefits-h3 {
-    font-size: 2em;
+    font-size: 1em;
   }
   .featuresBenefits-h4 {
-    font-size: 3em;
+    font-size: 2em;
   }
   .section-featuresBenefits {
     background: linear-gradient(to left, rgb(1, 11, 31), rgba(2, 19, 52, 1));
@@ -879,24 +888,71 @@ nav {
     margin: auto;
     width: 100%;
     flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
   }
-  .auto_text {
-    color: #d1a617;
-    font-family: Minecraft;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    overflow: hidden;
-    white-space: nowrap;
-    text-shadow: 0px 0px 60px rgb(158, 158, 251);
-    margin-left: 50px;
-    width: 100%;
-    height: 50px;
-    padding: 70px;
-    letter-spacing: 5px;
+  .wrapper-features1,
+  .wrapper-features2,
+  .wrapper-features3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .benefit {
+    font-family: Kanit;
+    font-weight: 200;
+    width: 60%;
+    color: white;
+    text-align: justify;
+  }
+.auto_text {
+  display: flex;
+  justify-content: center;
+  color: #d1a617;
+  font-family: Minecraft;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  animation: autoTxt 10s steps(50);
+  overflow: hidden;
+  white-space: wrap;
+  text-shadow: 0px 0px 60px rgb(158, 158, 251);
+  height: 100px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
   .sectionA_title {
     font-size: 2em;
   }
+  .container-socialProof {
+  display: flex;
+ flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  height: 100%;
+}
+.container-socialProofA,
+.container-socialProofB {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+}
+.wrapper-socialProof1,
+.wrapper-socialProof2,
+.wrapper-socialProof3 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+  font-family: Kanit;
+  font-weight: 200;
+  text-align: justify;
+}
   .footer-link {
     color: white;
     text-decoration: none;
