@@ -183,9 +183,6 @@ gsap.to(".service5 ", {
   },
 });
 
-
-
-
 if (window.innerWidth < 768) {
   gsap.to(".service1 ", {
     x: 30,
@@ -244,13 +241,6 @@ if (window.innerWidth < 768) {
   });
 }
 
-
-
-
-
-
-
-
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
   scrollTrigger: {
@@ -263,21 +253,7 @@ gsap.to(".auto_text", {
         // loop: true,
       });
 
-      typewriter
-        .changeDelay(50)
-        .typeString("Votre succes ")
-        .typeString("depend de notre ")
-        .pauseFor(400)
-        .typeString("qult ")
-        .deleteChars(5)
-        .typeString("qualite ")
-        .pauseFor(1000)
-        .typeString("d'ecoute . ")
-        .pauseFor(1000)
-        .typeString("C'est la le coeur meme ")
-        .pauseFor(500)
-        .typeString("de notre metier. ")
-        .start();
+      typewriter.changeDelay(50).typeString("Votre succes ").typeString("depend de notre ").typeString("qulate ").pauseFor(400).deleteChars(5).typeString("qualite ").pauseFor(600).typeString("d'e").pauseFor(200).typeString("coute").pauseFor(20).typeString(". ! ").start();
     },
   },
 });
@@ -367,34 +343,13 @@ menuIcon.addEventListener("click", function () {
   this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
   if (this.dataset.menuIcon == "true") {
     headerMenu.style.transform = "translateY(120px)";
-    console.log("ok")
+    console.log("ok");
   } else {
-     console.log("nok");
+    console.log("nok");
     headerMenu.style.transform = "translateY(-200px)";
   }
   headerMenu.style.transition = "transform 1.2s ease-in-out";
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // wrapperFeatures.addEventListener("mouseenter", function () {
 //   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
