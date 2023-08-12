@@ -253,7 +253,7 @@ gsap.to(".auto_text", {
         // loop: true,
       });
 
-      typewriter.changeDelay(50).typeString("Votre succes ").typeString("depend de notre ").typeString("qulate ").pauseFor(400).deleteChars(5).typeString("qualite ").pauseFor(600).typeString("d'e").pauseFor(200).typeString("coute").pauseFor(20).typeString(". ! ").start();
+      typewriter.changeDelay(50).typeString("Votre succes ").typeString("depend de notre ").typeString("qulate ").pauseFor(400).deleteChars(7).typeString("qualite ").pauseFor(600).typeString("d'e").pauseFor(400).typeString("coute").pauseFor(1000).typeString(". ! ").start();
     },
   },
 });
