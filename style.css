@@ -194,20 +194,26 @@ header {
   border: none;
   z-index: 9999999;
   cursor: pointer;
+  transition: 0.2s ease-in;
 }
 .flash-button {
   position: absolute;
-  background-color: #dfdeed;
-  border-radius: 10%;
+  background-color: #d9a39b;
+  border-radius: 4%;
   border: none;
   z-index: 0;
-  width: 120px;
-  height: 60px;
+  top: 5px;
+  left: 5px;
+  width: 100px;
+  height: 50px;
   opacity: 0.5;
   transform: scale(1);
 }
 .promiseValue-cta:hover + .flash-button {
-  animation: flash 0.3s ease-in-out;
+  animation: flash 0.6s ease-in-out;
+}
+.promiseValue-cta:hover {
+  transform: scale(0.9);
 }
 
 @keyframes flash {
@@ -341,7 +347,8 @@ header {
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: rgba(128, 128, 128, 0.308);
+  background-color: rgb(31, 30, 30);
+  width: 60%;
 }
 .feature {
   font-family: Kanit;
@@ -589,14 +596,17 @@ header {
 }
 .sectionA-buttons {
   background-color: #dd7062;
-  width: 30%;
+  width: 10%;
   height: 5em;
   border: solid white 2px;
   border-radius: 10px;
-  transition: 0.7s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .sectionA-buttons:hover {
   transform: scale(1.1);
+}
+.sectionA-buttons:active {
+  box-shadow: 2px 2px 5px inset black;
 }
 
 /* SECTION SOCIAL-PROOF */
@@ -612,6 +622,13 @@ header {
   box-shadow: 3px 0px 5px black;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.h3-socialProof {
+  font-family: Kanit;
+  font-size: 2.5em;
+  margin: 30px auto auto auto;
 }
 
 .auto_text {
@@ -620,7 +637,7 @@ header {
   color: #d1a617;
   font-family: Minecraft;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 0.7em;
   animation: autoTxt 10s steps(50);
   overflow: hidden;
   white-space: wrap;
@@ -628,9 +645,7 @@ header {
   height: 100px;
   line-height: 40px;
   letter-spacing: 5px;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 30px auto auto auto;
 }
 .Typewriter__wrapper {
   width: 100%;
@@ -666,17 +681,29 @@ header {
   text-align: justify;
   background-color: #dd7062;
 }
+.title-section-socialProof {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.h3-socialProof span {
+  font-size: 2cap;
+  color: white;
+  font-family: Tektur;
+}
 .bloc {
-  transition: 0.6s ease-in-out;
+  flex: 1;
+  transition: 0.68s ease-in-out;
 }
 
-.bloc:hover ~ .bloc {
-  transform: scale(0.9);
-}
 .bloc:hover {
-  padding: 40px;
+  flex: 2;
+  border-radius: 5px;
+  background-color: #de432f;
+  border: white solid 1px;
 }
-
+.bloc:not(:hover) {
+  opacity: 0.9;
+}
 /* .container-socialProofB:hover  ~  .container-socialProofA{
 transform: scale(0.9);
 } */
