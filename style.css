@@ -71,22 +71,30 @@ header {
   top: 470px;
   left: 140px;
   z-index: 99999;
-  width: 100%;
+  width: 30%;
 }
 .title {
-  font-size: 3em;
-  color: #f1f1e6;
+  padding: 10px;
+  font-size: 4em;
+  color: white;
   font-family: Tektur;
   text-align: justify;
   font-weight: 900;
   width: 100%;
   line-height: 20px;
-  text-shadow: 0px 0px 130px white;
+  transition: 0.2s ease-in-out;
+}
+.title:hover {
+  color: transparent;
+  background: linear-gradient(rgb(92, 92, 250) 2%, red);
+  -webkit-background-clip: text;
+  -webkit-text-size-adjust: transparent;
+  text-shadow: 0px 0px 100px white;
 }
 .title span {
   font-size: 0.3em;
   color: #f1f1e6;
-  font-family: Kanit;
+  font-family: Agdasima;
   font-weight: 200;
   width: 100%;
   letter-spacing: 3px;
@@ -165,23 +173,56 @@ header {
   font-family: Kanit;
   margin-bottom: 40px;
 }
+.container-button {
+  position: relative;
+  width: 150px;
+  height: 50px;
+}
+
 .promiseValue-cta {
+  position: absolute;
+  padding: 15px;
+  width: 120px;
+  height: 60px;
   background-color: #dd7062;
-  color: #f1f1e6;
+  color: #ffffff;
   font-weight: 100;
   font-size: 1.1em;
-  padding: 15px;
   font-family: Kanit;
   font-weight: 500;
   border-radius: 3%;
-  z-index: 9999999;
   border: none;
-  transition: 0.3s ease-in-out;
+  z-index: 9999999;
+  cursor: pointer;
 }
-.promiseValue-cta:hover {
-  /* background-color: #FDB05A;
-  color: black; */
-  transform: scale(1.1);
+.flash-button {
+  position: absolute;
+  background-color: #dfdeed;
+  border-radius: 10%;
+  border: none;
+  z-index: 0;
+  width: 120px;
+  height: 60px;
+  opacity: 0.5;
+  transform: scale(1);
+}
+.promiseValue-cta:hover + .flash-button {
+  animation: flash 0.3s ease-in-out;
+}
+
+@keyframes flash {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.promiseValue-cta:active {
+  box-shadow: 2px 2px 5px inset black;
+  font-size: 1em;
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ELEMENTS HEADER */
@@ -611,6 +652,7 @@ header {
   display: flex;
   padding: 20px;
   gap: 30px;
+  transition: 0.3s;
 }
 .wrapper-socialProof1,
 .wrapper-socialProof2,
@@ -622,7 +664,22 @@ header {
   font-family: Kanit;
   font-weight: 200;
   text-align: justify;
+  background-color: #dd7062;
 }
+.bloc {
+  transition: 0.6s ease-in-out;
+}
+
+.bloc:hover ~ .bloc {
+  transform: scale(0.9);
+}
+.bloc:hover {
+  padding: 40px;
+}
+
+/* .container-socialProofB:hover  ~  .container-socialProofA{
+transform: scale(0.9);
+} */
 
 /* FOOTER*/
 /* ######################################## */

@@ -351,6 +351,60 @@ menuIcon.addEventListener("click", function () {
   headerMenu.style.transition = "transform 1.2s ease-in-out";
 });
 
+
+// ______________________________________________
+// ______________________________________________
+// animation bouton header
+// ______________________________________________
+// ______________________________________________
+
+
+// let buttonHeader = document.querySelector(".promiseValue-cta");
+// let buttonFlash = document.querySelector(".flash-button")
+
+// buttonHeader.addEventListener("mouseenter", change);
+
+// function change() {
+//   buttonFlash.style.transform = "scale(3)";
+//   buttonFlash.style.opacity = "0";
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // wrapperFeatures.addEventListener("mouseenter", function () {
 //   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
 //   if (this.dataset.backgroundColorFeatures == "true") {
