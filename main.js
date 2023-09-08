@@ -397,6 +397,28 @@ menuIcon.addEventListener("click", function () {
   headerMenu.style.transition = "transform 1.2s ease-in-out";
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // for (let i = 0; i <2700; i++) {
 //   let starsA = document.createElement("div");
 
