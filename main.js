@@ -1,7 +1,6 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
-
 let rocket = document.querySelector(".rocket_wrapper");
 let flame = document.querySelector(".flame");
 
@@ -242,7 +241,6 @@ if (window.innerWidth < 768) {
 // =========================================
 // =========================================
 
-
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
   scrollTrigger: {
@@ -280,7 +278,6 @@ gsap.to(".auto_text", {
 // =========================================
 // =========================================
 
-
 const sonar = document.querySelector(".sonar");
 const menuTitle = document.querySelectorAll(".menu_title");
 console.log(menuTitle);
@@ -309,14 +306,12 @@ const autoTextAnswer = document.querySelector(".auto_text_answer");
 
 const txt =
   "Le succès de votre communication dépend de notre qualité d'écoute.";
-  
 
 // =========================================
 // =========================================
 // ANIMATION BACKGROUND FEATURES IMG3
 // =========================================
 // =========================================
-
 
 let wrapperFeatures1 = document.querySelector(".wrapper-features-img1");
 let backgroundColorFeatures1 = document.querySelector(
@@ -393,7 +388,7 @@ let headerMenu = document.querySelector(".header_menu");
 menuIcon.addEventListener("click", function () {
   this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
   if (this.dataset.menuIcon == "true") {
-    headerMenu.style.transform = "translateY(170px)";
+    headerMenu.style.transform = "translateY(350px)";
     console.log("ok");
   } else {
     console.log("nok");
@@ -401,30 +396,6 @@ menuIcon.addEventListener("click", function () {
   }
   headerMenu.style.transition = "transform 1.2s ease-in-out";
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // for (let i = 0; i <2700; i++) {
 //   let starsA = document.createElement("div");
@@ -440,9 +411,6 @@ menuIcon.addEventListener("click", function () {
 
 //   header.appendChild(starsA);
 // }
-
-
-
 
 // ______________________________________________
 // ______________________________________________
