@@ -1,20 +1,6 @@
 let header = document.querySelector(".header");
 let marquee_wrapper = document.querySelector(".marquee_wrapper");
 
-// for (let i = 0; i <2700; i++) {
-//   let starsA = document.createElement("div");
-
-//   starsA.classList.add("stars");
-//   starsA.style.width = Math.floor(Math.random() * 1 + 1) + "px";
-//   starsA.style.left = Math.random() * innerWidth + "px";
-//   starsA.style.top = Math.random() * innerWidth + "px";
-//   starsA.style.backgroundColor = "yellow";
-//   if (window.innerWidth < 770) {
-//     starsA.style.top = Math.random() * 1.5 * innerWidth + "px";
-//   }
-
-//   header.appendChild(starsA);
-// }
 
 let rocket = document.querySelector(".rocket_wrapper");
 let flame = document.querySelector(".flame");
@@ -26,7 +12,10 @@ for (let i = 0; i < 2; i++) {
   clone.style.height = Math.floor(Math.random() * 50 + 10) + "px";
   header.appendChild(clone);
 }
-CustomEase.create("custom", "M0,0 C0.023,0.07 0.356,0.104 0.41,0.186 0.65,0.551 0.544,1.09 0.634,1.228 0.721,1.363 0.926,1.282 1,1.282 ");
+CustomEase.create(
+  "custom",
+  "M0,0 C0.023,0.07 0.356,0.104 0.41,0.186 0.65,0.551 0.544,1.09 0.634,1.228 0.721,1.363 0.926,1.282 1,1.282 "
+);
 
 const rockets = document.querySelectorAll(".rocket_wrapper");
 const audioExplosion = document.querySelector(".explosion");
@@ -35,6 +24,12 @@ const rocketa = document.querySelector(".rocket");
 
 rockets.forEach((rocket, index) => {
   const playAudio = new Audio("./assets/sf_explosion_01.mp3");
+
+  // =========================================
+  // =========================================
+  //ANIMATION AU SCROLL
+  // =========================================
+  // =========================================
 
   gsap.to(rocket, {
     y: -680,
@@ -241,6 +236,13 @@ if (window.innerWidth < 768) {
   });
 }
 
+// =========================================
+// =========================================
+// TYPEWRITTER
+// =========================================
+// =========================================
+
+
 let autoTxt = document.querySelector(".auto_text");
 gsap.to(".auto_text", {
   scrollTrigger: {
@@ -253,10 +255,31 @@ gsap.to(".auto_text", {
         // loop: true,
       });
 
-      typewriter.changeDelay(50).typeString("Votre succes ").typeString("depend de notre ").typeString("qulate ").pauseFor(400).deleteChars(7).typeString("qualite ").pauseFor(600).typeString("d'e").pauseFor(400).typeString("coute").pauseFor(1000).typeString(". ! ").start();
+      typewriter
+        .changeDelay(50)
+        .typeString("Votre succes ")
+        .typeString("depend de notre ")
+        .typeString("qulate ")
+        .pauseFor(400)
+        .deleteChars(7)
+        .typeString("qualite ")
+        .pauseFor(600)
+        .typeString("d'e")
+        .pauseFor(400)
+        .typeString("coute")
+        .pauseFor(1000)
+        .typeString(". ! ")
+        .start();
     },
   },
 });
+
+// =========================================
+// =========================================
+// AUDIO SUR CLICK MENU
+// =========================================
+// =========================================
+
 
 const sonar = document.querySelector(".sonar");
 const menuTitle = document.querySelectorAll(".menu_title");
@@ -268,7 +291,8 @@ menuTitle.forEach(function (menuTitle) {
     const audio = new Audio(sonar.src);
     audio.volume = 0.1;
     audio.play();
-    this.dataset.translate = this.dataset.translate == "false" ? "true" : "false";
+    this.dataset.translate =
+      this.dataset.translate == "false" ? "true" : "false";
     if (this.dataset.translate == "true") {
       this.style.transform = "translateY(10px)";
       audio.volume = 0.1;
@@ -283,16 +307,25 @@ const buttons = document.querySelectorAll(".button_astonaut_choice");
 console.log(buttons);
 const autoTextAnswer = document.querySelector(".auto_text_answer");
 
-const txt = "Le succès de votre communication dépend de notre qualité d'écoute.";
+const txt =
+  "Le succès de votre communication dépend de notre qualité d'écoute.";
+  
 
-// ###################################################### animation background features img1
+// =========================================
+// =========================================
+// ANIMATION BACKGROUND FEATURES IMG3
+// =========================================
+// =========================================
+
 
 let wrapperFeatures1 = document.querySelector(".wrapper-features-img1");
-let backgroundColorFeatures1 = document.querySelector(".backgroundColor-features-img1");
+let backgroundColorFeatures1 = document.querySelector(
+  ".backgroundColor-features-img1"
+);
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures1.addEventListener("mouseenter", function () {
-  backgroundColorFeatures1.style.transform = "translateX(-30px)";
+  backgroundColorFeatures1.style.transform = "translateX(-18px)";
   backgroundColorFeatures1.style.transition = "1s";
 });
 
@@ -302,14 +335,20 @@ wrapperFeatures1.addEventListener("mouseleave", function () {
   backgroundColorFeatures1.style.transition = "1s";
 });
 
-// ###################################################### animation background features img2
+// =========================================
+// =========================================
+// ANIMATION BACKGROUND FEATURES IMG2
+// =========================================
+// =========================================
 
 let wrapperFeatures2 = document.querySelector(".wrapper-features-img2");
-let backgroundColorFeatures2 = document.querySelector(".backgroundColor-features-img2");
+let backgroundColorFeatures2 = document.querySelector(
+  ".backgroundColor-features-img2"
+);
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures2.addEventListener("mouseenter", function () {
-  backgroundColorFeatures2.style.transform = "translateX(-30px)";
+  backgroundColorFeatures2.style.transform = "translateX(-18px)";
   backgroundColorFeatures2.style.transition = "1s";
 });
 
@@ -319,14 +358,20 @@ wrapperFeatures2.addEventListener("mouseleave", function () {
   backgroundColorFeatures2.style.transition = "1s";
 });
 
-// ###################################################### animation background features img3
+// =========================================
+// =========================================
+// ANIMATION BACKGROUND FEATURES IMG3
+// =========================================
+// =========================================
 
 let wrapperFeatures3 = document.querySelector(".wrapper-features-img3");
-let backgroundColorFeatures3 = document.querySelector(".backgroundColor-features-img3");
+let backgroundColorFeatures3 = document.querySelector(
+  ".backgroundColor-features-img3"
+);
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures3.addEventListener("mouseenter", function () {
-  backgroundColorFeatures3.style.transform = "translateX(-30px)";
+  backgroundColorFeatures3.style.transform = "translateX(-34px)";
   backgroundColorFeatures3.style.transition = "1s";
 });
 
@@ -339,10 +384,16 @@ wrapperFeatures3.addEventListener("mouseleave", function () {
 let menuIcon = document.querySelector(".menu-icon");
 let headerMenu = document.querySelector(".header_menu");
 
+// =========================================
+// =========================================
+// ANIMATION TOGGLE menuIcon
+// =========================================
+// =========================================
+
 menuIcon.addEventListener("click", function () {
   this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
   if (this.dataset.menuIcon == "true") {
-    headerMenu.style.transform = "translateY(120px)";
+    headerMenu.style.transform = "translateY(170px)";
     console.log("ok");
   } else {
     console.log("nok");
@@ -352,12 +403,52 @@ menuIcon.addEventListener("click", function () {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (let i = 0; i <2700; i++) {
+//   let starsA = document.createElement("div");
+
+//   starsA.classList.add("stars");
+//   starsA.style.width = Math.floor(Math.random() * 1 + 1) + "px";
+//   starsA.style.left = Math.random() * innerWidth + "px";
+//   starsA.style.top = Math.random() * innerWidth + "px";
+//   starsA.style.backgroundColor = "yellow";
+//   if (window.innerWidth < 770) {
+//     starsA.style.top = Math.random() * 1.5 * innerWidth + "px";
+//   }
+
+//   header.appendChild(starsA);
+// }
+
+
+
+
 // ______________________________________________
 // ______________________________________________
 // animation bouton header
 // ______________________________________________
 // ______________________________________________
-
 
 // let buttonHeader = document.querySelector(".promiseValue-cta");
 // let buttonFlash = document.querySelector(".flash-button")
@@ -368,42 +459,6 @@ menuIcon.addEventListener("click", function () {
 //   buttonFlash.style.transform = "scale(3)";
 //   buttonFlash.style.opacity = "0";
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // wrapperFeatures.addEventListener("mouseenter", function () {
 //   this.dataset.backgroundColorFeatures = this.dataset.backgroundColorFeatures === "false" ? "true" : "false";
