@@ -93,10 +93,10 @@ gsap.to(".sectionA_container_services", {
 });
 gsap.to(".featuresBenefits-h2", {
   x: 30,
-  duration: 2,
+  duration: 1,
   scrollTrigger: {
     trigger: ".header",
-    start: "top -30%",
+    start: "top -10%",
     end: "center 30% ",
     toggleActions: "play none reverse none",
   },
@@ -397,9 +397,34 @@ menuIcon.addEventListener("click", function () {
   headerMenu.style.transition = "transform 1.2s ease-in-out";
 });
 
+// =========================================
+// =========================================
+// WRAPPER SOCIAL PROOF APPARATION TEXTE FULL
+// =========================================
+// =========================================
 
+let bloc = document.querySelectorAll(".bloc");
 
+bloc.forEach((element) => {
+  element.addEventListener("mouseenter", textToFullText);
 
+  let fullText = element.querySelector(".full-text");
+  let textEllipisis = element.querySelector(".social-proof");
+
+  function textToFullText() {
+    fullText.style.display = "block";
+    textEllipisis.style.display = "none";
+    console.log("ok");
+  }
+
+  element.addEventListener("mouseleave", fullTextTotext);
+
+  function fullTextTotext() {
+    fullText.style.display = "none";
+    textEllipisis.style.display = "block";
+    console.log("ok");
+  }
+});
 
 
 
