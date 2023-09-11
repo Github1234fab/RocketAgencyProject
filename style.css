@@ -923,7 +923,7 @@ nav {
   visibility: hidden;
   position: fixed;
   top: -200px;
-  /* transition : top 0.7s ease-in-out; */
+transition: top 0.7s ease-in-out; 
 
 }
 .header-menu-hamburger-visible{
@@ -942,8 +942,6 @@ nav {
   z-index: 99999999;
 visibility: visible;
 top: 0px;
-transition : top 0.7s ease-in-out;
-
 }
   .menu_title {
     font-size: 1.4em;
