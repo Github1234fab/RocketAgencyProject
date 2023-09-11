@@ -376,26 +376,30 @@ wrapperFeatures3.addEventListener("mouseleave", function () {
   backgroundColorFeatures3.style.transition = "1s";
 });
 
-let menuIcon = document.querySelector(".menu-icon");
-let headerMenu = document.querySelector(".header_menu");
-
 // =========================================
 // =========================================
 // ANIMATION TOGGLE menuIcon
 // =========================================
 // =========================================
 
-menuIcon.addEventListener("click", function () {
-  this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
-  if (this.dataset.menuIcon == "true") {
-    headerMenu.style.transform = "translateY(350px)";
-    console.log("ok");
-  } else {
-    console.log("nok");
-    headerMenu.style.transform = "translateY(-200px)";
-  }
-  headerMenu.style.transition = "transform 1.2s ease-in-out";
-});
+let menuIcon = document.querySelector(".menu-icon");
+let headerMenuHamburger = document.querySelector(".header-menu-hamburger");
+
+if (window.innerWidth < 778) {
+  console.log("okkok");
+  menuIcon.addEventListener("click", function () {
+    this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
+    if (this.dataset.menuIcon == "true") {
+      headerMenuHamburger.classList.add("header-menu-hamburger-visible");
+
+      console.log("ok");
+    } else {
+      console.log("nok");
+      //  headerMenuHamburger.style.transition = "top 0.7s ease-in-out";
+      headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
+    }
+  });
+}
 
 // =========================================
 // =========================================
@@ -425,24 +429,6 @@ bloc.forEach((element) => {
     console.log("ok");
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // for (let i = 0; i <2700; i++) {
 //   let starsA = document.createElement("div");
