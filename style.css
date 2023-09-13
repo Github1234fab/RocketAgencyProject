@@ -29,8 +29,8 @@ body {
 :root {
   --colorA: #021334;
   --colorB: #9f4466;
-  /* --colorB:#857555; */
   --colorC: #d1a617;
+  --colorCPlus: #d0bf8a;
   --colorAFade: #021334bb;
   --colorBFade: #9f4465a7;
 }
@@ -148,6 +148,16 @@ header {
   color: #fddd55;
   border-bottom: #6ffca4 solid 2px;
 }
+
+
+/* +++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++
+BLOC PROMESSE VALEUR
++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++ */
+
+
+
 .container-promiseValue {
   grid-column: 2;
   grid-row: 2;
@@ -162,15 +172,6 @@ header {
   z-index: 999999999;
 }
 
-.button-promiseValue {
-  background-color: var(--colorC);
-  height: 50px;
-  width: 30%;
-  color: white;
-  font-family: kanit;
-  font-weight: 500;
-  border: none;
-}
 .promise {
   color: #f1f1e6;
   font-weight: 100;
@@ -194,6 +195,49 @@ header {
   background-color: (var--colorB);
   width: 100%;
 }
+.button-promiseValue {
+  cursor: pointer;
+
+  background-color: var(--colorC);
+  height: 50px;
+  width: 30%;
+  color: white;
+  font-family: kanit;
+  font-weight: 400;
+  border: none;
+  border-radius: 5%;
+  font-size: 1.1em;
+  transition: 0.3s ease-in-out;
+}
+.button-promiseValue-flash {
+
+  height: 50px;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.714);
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+  border: none;
+  margin-top: -70px;
+}
+.button-promiseValue:hover + .button-promiseValue-flash {
+  animation: flash 0.2s ease-in-out;
+}
+.button-promiseValue:hover {
+  transform: scale(1.1);
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1.4);
+    box-shadow: 0px 0px 100px white;
+  }
+}
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ELEMENTS HEADER */
 
@@ -201,18 +245,7 @@ header {
   height: 45px;
   transform: rotate(-55deg);
 }
-/* .rocketC {
-  height: 80px;
-  transform: rotate(0deg);
-} */
-/* .rocket_wrapper {
-  z-index: 999;
-  position: absolute;
-  top: 580px;
-  left: 60%;
-  animation: rocketDecollage 10s;
-  animation-timing-function: cubic-bezier(0.96, -0.01, 0, 1.3);
-} */
+
 .rocket_wrapper {
   z-index: 999;
   position: absolute;
@@ -260,13 +293,14 @@ header {
   grid-column: 1;
 }
 
-/* SECTION FEATURES AND BENEFITS */
 /* ######################################## */
+/* ######################################## */
+/* SECTION FEATURES AND BENEFITS */
 /* ######################################## */
 /* ######################################## */
 
 .section-featuresBenefits {
-  background: linear-gradient(to left, rgb(1, 11, 31), rgba(2, 19, 52, 1));
+  background-color: var(--colorA);
   margin-top: 10px;
   box-shadow: 3px 0px 5px black;
   display: flex;
@@ -275,6 +309,8 @@ header {
   overflow: hidden;
   padding: 20px;
   background-image: url(assets/Capture\ d’écran\ 2023-08-11\ à\ 11.26.00.png);
+  background-repeat: no-repeat;
+  background-position: cover;
 }
 
 .featuresBenefits-h2 {
@@ -284,8 +320,7 @@ header {
   font-size: 5em;
   font-weight: 400;
   transform: translateX(2000px);
-  /* background-color: #d1a617; */
-  background-color: var(--colorB);
+  background-color: var(--colorBFade);
   text-shadow: 2px 3px 10px #392d06;
   padding: 20px;
 }
@@ -326,8 +361,7 @@ header {
   align-content: center;
   justify-content: center;
   width: 100%;
-  box-shadow: 1px 1px 5px rgb(57, 56, 56);
-  backdrop-filter: blur(1px);
+  box-shadow: 1px 1px 5px rgb(57, 56, 56);  
 }
 .feature {
   font-family: Kanit;
@@ -512,13 +546,13 @@ header {
   text-transform: uppercase;
   white-space: nowrap;
   font-family: Big Shoulders text;
+  font-weight: 200;
   letter-spacing: 1px;
   color: var(--colorB);
-  -webkit-text-stroke: 4px;
   animation: marquee 8s linear infinite;
   padding: 20px;
   z-index: 99999;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   transform: translateX(100%);
 }
 
@@ -583,10 +617,11 @@ header {
   border: none;
   color: rgb(255, 255, 255);
   font-weight: 600;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 .sectionA-buttons:hover {
   transform: scale(1.1);
+  background-color: var(--colorCPlus);
 }
 .sectionA-buttons:active {
   box-shadow: 2px 2px 5px inset black;
@@ -599,6 +634,7 @@ header {
 
 .section-socialProof {
   background: linear-gradient(to left, rgb(1, 11, 31), rgba(2, 19, 52, 1));
+  background-image: url(assets/Capture\ d’écran\ 2023-08-11\ à\ 11.26.00.png);
   min-height: 600px;
   color: #ffffff;
   margin-top: 10px;
@@ -825,7 +861,6 @@ nav {
 /* ############################################################################################################################################################## */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) {
-
 }
 
 @media screen and (max-width: 770px) {
@@ -966,62 +1001,6 @@ nav {
     margin-left: 0px;
     width: 60%;
   }
-  /* 
-  .promiseValue-cta {
-    grid-column: 1;
-    grid-row: 3;
-    padding: 15px;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    background-color: #fdb05a;
-    color: var(--colorA);
-    font-size: 0.9em;
-    font-family: Kanit;
-    font-weight: 500;
-    border-radius: 3%;
-    border: none;
-    z-index: 9999999;
-    cursor: pointer;
-    transition: 0.2s ease-in;
-    margin-top: 0px;
-    margin-left: 350px;
-  }
-  .flash-button {
-    margin-left: 400px;
-    position: absolute;
-    background-color: #d9a39b;
-    border-radius: 4%;
-    border: none;
-    z-index: 0;
-    top: 15px;
-    left: 30px;
-    width: 60px;
-    height: 30px;
-    opacity: 0.5;
-    transform: scale(1);
-    box-shadow: 0px 0px 50px white;
-  }
-  .promiseValue-cta:hover + .flash-button {
-    animation: flash 0.3s ease-in-out;
-  }
-
-  @keyframes flash {
-    from {
-      transform: scale(1);
-      opacity: 1;
-    }
-    to {
-      transform: scale(3.8);
-      opacity: 0;
-    }
-  }
-  .promiseValue-cta:focus {
-    box-shadow: 2px 2px 5px inset black;
-    font-size: 1em;
-  } */
 
   .moon {
     position: absolute;
