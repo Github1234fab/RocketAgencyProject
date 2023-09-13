@@ -24,7 +24,7 @@ html {
 }
 body {
   scroll-behavior: smooth;
-  background-color: #614b7b;
+  background-color: var(--colorD);
 }
 :root {
   --colorA: #021334;
@@ -33,6 +33,7 @@ body {
   --colorCPlus: #d0bf8a;
   --colorAFade: #021334bb;
   --colorBFade: #9f4465a7;
+  --colorD: #678BF6 ;
 }
 
 header {
@@ -301,7 +302,7 @@ BLOC PROMESSE VALEUR
 
 .section-featuresBenefits {
   background-color: var(--colorA);
-  margin-top: 10px;
+  margin-top: 5px;
   box-shadow: 3px 0px 5px black;
   display: flex;
   flex-direction: column;
@@ -511,15 +512,18 @@ BLOC PROMESSE VALEUR
   margin-bottom: 20px;
 }
 
-/* SECTION CTA*/
-/* ######################################## */
-/* ######################################## */
-/* ######################################## */
+
+/* ++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++
+SECTION CTA
+++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++= */
+
 
 .sectionCTA {
-  margin-top: 10px;
+  margin-top: 5px;
   min-height: 500px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   background-image: url("./assets/pngegg\ \(72\).png");
   background-size: contain;
   background-position: center;
@@ -545,10 +549,10 @@ BLOC PROMESSE VALEUR
   font-size: 8em;
   text-transform: uppercase;
   white-space: nowrap;
-  font-family: Big Shoulders text;
+  font-family: kanit;
   font-weight: 200;
   letter-spacing: 1px;
-  color: var(--colorB);
+  color: var(--colorD);
   animation: marquee 8s linear infinite;
   padding: 20px;
   z-index: 99999;
@@ -637,13 +641,12 @@ BLOC PROMESSE VALEUR
   background-image: url(assets/Capture\ d’écran\ 2023-08-11\ à\ 11.26.00.png);
   min-height: 600px;
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 5px;
   box-shadow: 3px 0px 5px black;
   width: 100vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* background-image: url(assets/DALL·E\ 2023-06-22\ 23.40.55\ -\ photo\ d\'une\ fusée\ futuriste\ hyper\ puissante\ qui\ décolle.png); */
   background-size: cover;
 }
 .title-sectionSocialProof {
@@ -754,7 +757,7 @@ footer {
   overflow: hidden;
 }
 .footer-content {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   padding: 50px;
