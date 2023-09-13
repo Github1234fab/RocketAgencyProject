@@ -327,13 +327,13 @@ let backgroundColorFeatures1 = document.querySelector(
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures1.addEventListener("mouseenter", function () {
-  backgroundColorFeatures1.style.transform = "translateX(-18px)";
+  backgroundColorFeatures1.style.transform = "translateX(-7px)";
   backgroundColorFeatures1.style.transition = "1s";
 });
 
 // Écouter l'événement "mouseleave"
 wrapperFeatures1.addEventListener("mouseleave", function () {
-  backgroundColorFeatures1.style.transform = "translateX(150px)";
+  backgroundColorFeatures1.style.transform = "translateX(190px)";
   backgroundColorFeatures1.style.transition = "1s";
 });
 
@@ -350,13 +350,13 @@ let backgroundColorFeatures2 = document.querySelector(
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures2.addEventListener("mouseenter", function () {
-  backgroundColorFeatures2.style.transform = "translateX(-18px)";
+  backgroundColorFeatures2.style.transform = "translateX(-7px)";
   backgroundColorFeatures2.style.transition = "1s";
 });
 
 // Écouter l'événement "mouseleave"
 wrapperFeatures2.addEventListener("mouseleave", function () {
-  backgroundColorFeatures2.style.transform = "translateX(150px)";
+  backgroundColorFeatures2.style.transform = "translateX(190px)";
   backgroundColorFeatures2.style.transition = "1s";
 });
 
@@ -373,13 +373,13 @@ let backgroundColorFeatures3 = document.querySelector(
 
 // Écouter l'événement "mouseenter"
 wrapperFeatures3.addEventListener("mouseenter", function () {
-  backgroundColorFeatures3.style.transform = "translateX(-34px)";
+  backgroundColorFeatures3.style.transform = "translateX(-23px)";
   backgroundColorFeatures3.style.transition = "1s";
 });
 
 // Écouter l'événement "mouseleave"
 wrapperFeatures3.addEventListener("mouseleave", function () {
-  backgroundColorFeatures3.style.transform = "translateX(150px)";
+  backgroundColorFeatures3.style.transform = "translateX(190px)";
   backgroundColorFeatures3.style.transition = "1s";
 });
 
@@ -389,29 +389,21 @@ wrapperFeatures3.addEventListener("mouseleave", function () {
 // =========================================
 // =========================================
 
-let menuIcon = document.querySelector(".menu-icon");
+const burger = document.querySelector(".burger");
 let headerMenuHamburger = document.querySelector(".header-menu-hamburger");
+let isActive = false;
 
-if (window.innerWidth < 778) {
-  console.log("okkok");
-  menuIcon.addEventListener("click", function () {
-    this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
-    if (this.dataset.menuIcon == "true") {
-      headerMenuHamburger.classList.add("header-menu-hamburger-visible");
-      menuIcon.style.color = "white";
-      menuIcon.style.transition = ".300s ease-in-out";
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  isActive = !isActive; // Inverser l'état de la variable isActive
+  if (isActive) {
+    headerMenuHamburger.classList.add("header-menu-hamburger-visible");
+  } else {
+    headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
+    // Le code à exécuter lorsque la classe "active" n'est plus présente
+  }
+});
 
-      console.log("ok");
-    } else {
-      console.log("nok");
-      //  headerMenuHamburger.style.transition = "top 0.7s ease-in-out";
-      headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
-      menuIcon.style.color = "var(--colorC)";
-      menuIcon.style.transition = ".300s ease-in-out";
-    }
-    // headerMenuHamburger.style.transition = ".600s ease-in-out";
-  });
-}
 
 // =========================================
 // =========================================
@@ -441,6 +433,60 @@ bloc.forEach((element) => {
     console.log("ok");
   }
 });
+
+
+
+
+
+
+// let menuIcon = document.querySelector(".menu-icon");
+// let menuIconCross = document.querySelector(".menu-icon-cross");
+// let headerMenuHamburger = document.querySelector(".header-menu-hamburger");
+
+// if (window.innerWidth < 778) {
+//   console.log("okkok");
+//   menuIcon.addEventListener("click", function () {
+//     this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
+//     this.dataset.menuIconCross = this.dataset.menuIconCross === "true" ? "false" : "true";
+//     if (this.dataset.menuIcon == "true") {
+//       headerMenuHamburger.classList.add("header-menu-hamburger-visible");
+//       this.dataset.menuIconCross == "true";
+//       menuIcon.style.display = "none";
+//       menuIconCross.style.visibility = "visible";
+
+//       menuIcon.style.transition = ".300s ease-in-out";
+
+//       console.log("ok");
+//     }
+//   });
+//   menuIconCross.addEventListener("click", function () {
+//     this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
+//     this.dataset.menuIconCross = this.dataset.menuIconCross === "true" ? "false" : "true";
+//     if (this.dataset.menuIconCross == "true") {
+//       headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
+//       this.dataset.menuIcon == "false";
+//       menuIcon.style.display= "block";
+//       menuIconCross.style.visibility = "hidden";
+
+//       menuIcon.style.transition = ".300s ease-in-out";
+
+//       console.log("ok");
+//     }
+//   });
+// }
+
+// else {
+//   console.log("nok");
+//    headerMenuHamburger.style.transition = "top 0.7s ease-in-out";
+//   headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
+//   menuIcon.style.visibility= "visible";
+//   menuIconCross.style.display = "none";
+//   menuIcon.style.transition = ".300s ease-in-out";
+// }
+// headerMenuHamburger.style.transition = ".600s ease-in-out";
+//   });
+// }
+
 
 // for (let i = 0; i <2700; i++) {
 //   let starsA = document.createElement("div");

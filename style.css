@@ -127,14 +127,58 @@ header {
   width: 100%;
   height: 150px;
 }
-.menu-icon {
-  color: var(--colorC);
-  position: absolute;
-  top: 30px;
-  left: 30px;
+
+/* ++++++++++++++++
+++++++++++++++++
+MENU .burger
++++++++++++++++++
++++++++++++++++ */
+
+.burger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 99999999999;
   visibility: hidden;
-  z-index: 999999999999;
 }
+.burger span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  transition: background-color 0.7s ease-in-out;
+}
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  transition: 0.7s ease-in-out;
+}
+.burger span::before {
+  transform: translateY(-10px);
+}
+.burger span::after {
+  transform: translateY(10px);
+}
+.burger.active span {
+  background-color: transparent;
+}
+.burger.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+}
+.burger.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
 .menu_title {
   color: rgb(255, 255, 255);
   font-size: 1.3em;
@@ -251,7 +295,7 @@ BLOC PROMESSE VALEUR
   cursor: pointer;
   background-color: var(--colorC);
   height: 50px;
-  width: 30%;
+  width: 20%;
   color: white;
   font-family: kanit;
   font-weight: 400;
@@ -262,10 +306,10 @@ BLOC PROMESSE VALEUR
 }
 .button-promiseValue-flash {
   height: 50px;
-  width: 30%;
+  width: 20%;
   background-color: rgba(255, 255, 255, 0.714);
   z-index: -1;
-  opacity: 0;
+  /* opacity: 0; */
   transform: scale(0);
   transition: 0.3s ease-in-out;
   border: none;
@@ -281,11 +325,12 @@ BLOC PROMESSE VALEUR
   0% {
     opacity: 1;
     transform: scale(1);
+    box-shadow: 0px 0px 100px white;
   }
   100% {
-    opacity: 0.3;
-    transform: scale(1.7);
-    box-shadow: 0px 0px 50px white;
+    opacity: 0.1;
+    transform: scale(1.8);
+    box-shadow: 0px 0px 100px white;
   }
 }
 
@@ -406,8 +451,8 @@ BLOC PROMESSE VALEUR
 .backgroundColor-features-img1 {
   position: absolute;
   top: 0px;
-  transform: translateX(150px);
-  background-color: var(--colorB);
+  transform: translateX(190px);
+  background: linear-gradient(var(--colorA), #614b7b);
   height: 200px;
   width: 200px;
   z-index: 0;
@@ -433,20 +478,21 @@ BLOC PROMESSE VALEUR
 
 .features-img2 {
   position: absolute;
-  background-image: url(assets/fusée\ noire.png);
+  background-image: url(assets/pngegg\\(68\).png);
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 90%;
   background-position: center;
   height: 100px;
   width: 100px;
   z-index: 99;
   margin-left: 5px;
+  transform: rotate(-30deg);
 }
 .backgroundColor-features-img2 {
   position: absolute;
   top: 0px;
-  transform: translateX(150px);
-  background-color: var(--colorA);
+  transform: translateX(190px);
+  background: linear-gradient(var(--colorA), #614b7b);
   height: 200px;
   width: 200px;
   z-index: 0;
@@ -478,12 +524,13 @@ BLOC PROMESSE VALEUR
   border-radius: 50%;
   margin-left: 20px;
   margin-top: 10px;
+  z-index: 99;
 }
 .backgroundColor-features-img3 {
   position: absolute;
   top: 0px;
-  transform: translateX(150px);
-  background-color: var(--colorA);
+  transform: translateX(190px);
+  background: linear-gradient(var(--colorA), #614b7b);
   height: 200px;
   width: 200px;
   z-index: 0;
@@ -542,7 +589,7 @@ SECTION CTA
   text-transform: uppercase;
   white-space: nowrap;
   font-family: kanit;
-  font-weight: 200;
+  font-weight: 700;
   letter-spacing: 1px;
   color: var(--colorD);
   animation: marquee 8s linear infinite;
@@ -941,9 +988,13 @@ nav {
   .header_menu {
     display: none;
   }
-  .menu-icon {
+  .burger {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 9999999999999999999999;
     visibility: visible;
-    transform: scale(1);
   }
 
   .header-menu-hamburger {
@@ -961,6 +1012,7 @@ nav {
     visibility: hidden;
     top: -200px;
     transition: 0.9s ease-in-out;
+    z-index: 999999999;
   }
   .header-menu-hamburger-visible {
     position: fixed;
