@@ -405,12 +405,16 @@ if (window.innerWidth < 778) {
     this.dataset.menuIcon = this.dataset.menuIcon === "true" ? "false" : "true";
     if (this.dataset.menuIcon == "true") {
       headerMenuHamburger.classList.add("header-menu-hamburger-visible");
+      menuIcon.style.color = "white";
+       menuIcon.style.transition = ".300s ease-in-out";
 
       console.log("ok");
     } else {
       console.log("nok");
       //  headerMenuHamburger.style.transition = "top 0.7s ease-in-out";
       headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
+      menuIcon.style.color = "var(--colorC)";
+             menuIcon.style.transition = ".300s ease-in-out";
     }
       // headerMenuHamburger.style.transition = ".600s ease-in-out";
   });
