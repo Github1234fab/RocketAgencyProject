@@ -122,14 +122,11 @@ gsap.to(".featuresBenefits-h4", {
   },
 });
 
-
-
 // ++++++++++++++++++++++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++
 //   Déplacement containers services pour smartphone
 // +++++++++++++++++++++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++
-
 
 if (window.innerWidth < 768) {
   gsap.to(".service1 ", {
@@ -189,8 +186,6 @@ if (window.innerWidth < 768) {
   });
 }
 
-
-
 gsap.to(".service1 ", {
   x: 150,
   marginBottom: 50,
@@ -246,8 +241,6 @@ gsap.to(".service5 ", {
     toggleActions: "play none reverse none",
   },
 });
-
-
 
 // =========================================
 // =========================================
@@ -406,7 +399,7 @@ if (window.innerWidth < 778) {
     if (this.dataset.menuIcon == "true") {
       headerMenuHamburger.classList.add("header-menu-hamburger-visible");
       menuIcon.style.color = "white";
-       menuIcon.style.transition = ".300s ease-in-out";
+      menuIcon.style.transition = ".300s ease-in-out";
 
       console.log("ok");
     } else {
@@ -414,9 +407,9 @@ if (window.innerWidth < 778) {
       //  headerMenuHamburger.style.transition = "top 0.7s ease-in-out";
       headerMenuHamburger.classList.remove("header-menu-hamburger-visible");
       menuIcon.style.color = "var(--colorC)";
-             menuIcon.style.transition = ".300s ease-in-out";
+      menuIcon.style.transition = ".300s ease-in-out";
     }
-      // headerMenuHamburger.style.transition = ".600s ease-in-out";
+    // headerMenuHamburger.style.transition = ".600s ease-in-out";
   });
 }
 
