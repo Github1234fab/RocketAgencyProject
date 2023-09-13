@@ -825,28 +825,7 @@ nav {
 /* ############################################################################################################################################################## */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) {
-  .container-promiseValue {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 30px;
-    height: 110%;
-    width: 90%;
-    background-color: #9f4465c7;
-    padding: 20px;
-    position: relative;
-  }
 
-  .container-promiseValue::after {
-    position: absolute;
-    content: "Décollage !";
-    background-color: var(--colorC);
-    padding: 10px 20px;
-    top: 300px;
-    left: 320px;
-  }
 }
 
 @media screen and (max-width: 770px) {
