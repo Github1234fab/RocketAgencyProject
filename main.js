@@ -132,14 +132,13 @@ if (window.innerWidth < 768) {
   gsap.fromTo(
     ".service1 ",
     {
-      x: 0,
-    },
-    {
+      x: 0
+    },{
       x: 30,
-      duration: 1,
+      // duration: 1,
       scrollTrigger: {
         trigger: ".sectionCTA",
-        start: "top -300px",
+        start: "top -200px",
         end: "center -100%",
         toggleActions: "play none reverse none",
       },
@@ -153,7 +152,7 @@ if (window.innerWidth < 768) {
     {
       x: -30,
       // marginBottom: 50,
-      duration: 1,
+      // duration: 1,
       scrollTrigger: {
         trigger: ".sectionCTA",
         start: "top -400px",
@@ -170,7 +169,7 @@ if (window.innerWidth < 768) {
     {
       x: 30,
       // marginBottom: 50,
-      duration: 1,
+      // duration: 1,
       scrollTrigger: {
         trigger: ".sectionCTA",
         start: "top -600px",
@@ -187,7 +186,7 @@ if (window.innerWidth < 768) {
     {
       x: -30,
       // marginBottom: 50,
-      duration: 1,
+      // duration: 1,
       scrollTrigger: {
         trigger: ".sectionCTA",
         start: "top -800px",
@@ -204,7 +203,7 @@ if (window.innerWidth < 768) {
     {
       x: 30,
       // marginBottom: 50,
-      duration: 1,
+      // duration: 1,
       scrollTrigger: {
         trigger: ".sectionCTA",
         start: "top -1000px",
@@ -220,62 +219,62 @@ if (window.innerWidth < 768) {
 //   +++++++++++++++++++
 //     ++++++++++++
 
-
-gsap.to(".service1 ", {
-  x: 150,
-  marginBottom: 50,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".sectionCTA",
-    start: "top -100px",
-    end: "center -100%",
-    toggleActions: "play none reverse none",
-  },
-});
-gsap.to(".service2 ", {
-  x: -150,
-  marginBottom: 50,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".sectionCTA",
-    start: "top -400px",
-    end: "center -100%",
-    toggleActions: "play none reverse none",
-  },
-});
-gsap.to(".service3 ", {
-  x: 150,
-  marginBottom: 50,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".sectionCTA",
-    start: "top -600px",
-    end: "center -100%",
-    toggleActions: "play none reverse none",
-  },
-});
-gsap.to(".service4 ", {
-  x: -150,
-  marginBottom: 50,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".sectionCTA",
-    start: "top -800px",
-    end: "center -100%",
-    toggleActions: "play none reverse none",
-  },
-});
-gsap.to(".service5 ", {
-  x: 150,
-  marginBottom: 50,
-  duration: 2,
-  scrollTrigger: {
-    trigger: ".sectionCTA",
-    start: "top -1000px",
-    end: "bottom",
-    toggleActions: "play none reverse none",
-  },
-});
+if (window.innerWidth >= 768) {
+  gsap.to(".service1 ", {
+    x: 150,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -100px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service2 ", {
+    x: -150,
+    // marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -400px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service3 ", {
+    x: 150,
+    // marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -600px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service4 ", {
+    x: -150,
+    // marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -800px",
+      end: "center -100%",
+      toggleActions: "play none reverse none",
+    },
+  });
+  gsap.to(".service5 ", {
+    x: 150,
+    // marginBottom: 50,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".sectionCTA",
+      start: "top -1000px",
+      end: "bottom",
+      toggleActions: "play none reverse none",
+    },
+  });
+}
 
 // =========================================
 // =========================================

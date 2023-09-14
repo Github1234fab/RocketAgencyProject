@@ -143,6 +143,9 @@ MENU .burger
   cursor: pointer;
   z-index: 99999999999;
   visibility: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 5%;
 }
 .burger span {
   display: block;
@@ -150,7 +153,7 @@ MENU .burger
   top: 50%;
   transform: translateY(-50%);
   background-color: white;
-  width: 100%;
+  width: 90%;
   height: 2px;
   transition: background-color 0.7s ease-in-out;
 }
@@ -751,7 +754,13 @@ SECTION CTA
 .social-proof {
   font-family: Kanit;
   font-weight: 400;
-  color: rgb(189, 187, 187);
+  color: rgb(255, 252, 252);
+  line-height: 10px;
+}
+.social-proof span {
+  font-size: 4ch;
+  color: white;
+  font-family: Kanit;
 }
 .full-text {
   font-family: Kanit;
@@ -761,7 +770,7 @@ SECTION CTA
 }
 .title-section-socialProof {
   font-family: kanit;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--colorC);
   margin-bottom: 20px;
@@ -903,9 +912,6 @@ nav {
 /* ############################################################################################################################################################@ */
 /* ############################################################################################################################################################## */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) {
-}
-
 @media screen and (max-width: 770px) {
   header {
     position: relative;
@@ -933,7 +939,6 @@ nav {
   .satelit {
     height: 3em;
     z-index: 9999999999999;
-    /* position: absolute; */
   }
   .circle {
     position: relative;
@@ -996,6 +1001,7 @@ nav {
     cursor: pointer;
     z-index: 9999999999999999999999;
     visibility: visible;
+    background-color: #522a58;
   }
 
   .header-menu-hamburger {
@@ -1061,8 +1067,6 @@ nav {
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-
-    /* visibility: hidden; */
   }
   .promise-subTitle {
     color: #f1f1e6;
@@ -1070,7 +1074,6 @@ nav {
     font-family: Kanit;
     text-align: center;
     width: 100%;
-    /* visibility: hidden; */
   }
   .socialPromise {
     color: #dd7062;
@@ -1142,13 +1145,8 @@ nav {
     margin-left: 30px;
     display: none;
   }
-
   .sectionA_title {
     font-size: 2em;
-  }
-  .sectionA_container_services {
-    margin-top: 150px;
-    margin-bottom: -150px;
   }
   .sectionA-wrapper-services {
     box-shadow: none;
@@ -1161,17 +1159,7 @@ nav {
     margin-bottom: 10px;
   }
   .sectionCTA {
-    margin-top: 5px;
-    min-height: 500px;
-    background-image: url("./assets/pngegg\ \(73\).png");
-    background-size: 240%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: saturate(100%);
-    background-color: #021334;
-    box-shadow: 3px 0px 5px black;
-    width: 100vw;
-    overflow: hidden;
+    background-size: 550%;
   }
   .marquee_txt {
     margin-top: 40px;
@@ -1187,6 +1175,18 @@ nav {
     /* margin-bottom: 20px; */
     transform: translateX(100%);
   }
+  .service1,
+  .service2,
+  .service3,
+  .service4,
+  .service5 {
+    color: white;
+  }
+  .sectionA_container_services {
+    margin: 170px auto auto auto;
+    padding: 0px;
+  }
+
   .container-socialProofA,
   .container-socialProofB {
     flex-direction: column;
@@ -1197,6 +1197,12 @@ nav {
     margin: 40px auto auto auto;
   }
 
+  .title-section-socialProof {
+    color: var(--colorC);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2em;
+  }
   .footer-link {
     color: white;
     text-decoration: none;
