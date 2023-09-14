@@ -131,11 +131,11 @@ gsap.to(".featuresBenefits-h4", {
 if (window.innerWidth < 768) {
   gsap.to(".service1 ", {
     x: 30,
-    marginBottom: 50,
+    // marginBottom: 20,
     duration: 2,
     scrollTrigger: {
       trigger: ".sectionCTA",
-      start: "top -300px",
+      start: "top -100px",
       end: "center -100%",
       toggleActions: "play none reverse none",
     },
@@ -404,7 +404,6 @@ burger.addEventListener("click", () => {
   }
 });
 
-
 // =========================================
 // =========================================
 // WRAPPER SOCIAL PROOF APPARATION TEXTE FULL
@@ -433,11 +432,6 @@ bloc.forEach((element) => {
     console.log("ok");
   }
 });
-
-
-
-
-
 
 // let menuIcon = document.querySelector(".menu-icon");
 // let menuIconCross = document.querySelector(".menu-icon-cross");
@@ -486,7 +480,6 @@ bloc.forEach((element) => {
 // headerMenuHamburger.style.transition = ".600s ease-in-out";
 //   });
 // }
-
 
 // for (let i = 0; i <2700; i++) {
 //   let starsA = document.createElement("div");
