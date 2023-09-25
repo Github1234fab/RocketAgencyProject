@@ -27,7 +27,9 @@ body {
 }
 
 :root {
-   --colorA: #021334;
+   --colorA: #02112f;
+      --colorHeader: #010f27;
+
    --colorB: #9f4466;
    --colorC: #d1a617;
    --colorCPlus: #d0bf8a;
@@ -38,7 +40,7 @@ body {
 
 header {
    /* background-image: url(assets/Capture\ d’écran\ 2023-08-11\ à\ 11.26.00.png); */
-   background-color: var(--colorA);
+   background-color: var(--colorHeader);
    background-repeat: no-repeat;
    background-position: contain;
    position: relative;
